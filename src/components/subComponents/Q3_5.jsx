@@ -11,31 +11,56 @@ class Q3_5 extends Component {
             <label id='label3-5-1' htmlFor='3-5-1'>
               清<span className='lastLetterNoSpacing'>晨</span>
             </label>
-            <input id='3-5-1' name='group3-5' defaultValue='' type='checkbox' />
+            <input
+              id='3-5-1'
+              name='group3-5'
+              defaultValue='dawn'
+              type='checkbox'
+            />
           </div>
           <div id='opt3-5-2' className='multiOpt group3-5'>
             <label id='label3-5-2' htmlFor='3-5-2'>
               白<span className='lastLetterNoSpacing'>天</span>
             </label>
-            <input id='3-5-2' name='group3-5' defaultValue='' type='checkbox' />
+            <input
+              id='3-5-2'
+              name='group3-5'
+              defaultValue='daytime'
+              type='checkbox'
+            />
           </div>
           <div id='opt3-5-3' className='multiOpt group3-5'>
             <label id='label3-5-3' htmlFor='3-5-3'>
               黄<span className='lastLetterNoSpacing'>昏</span>
             </label>
-            <input id='3-5-3' name='group3-5' defaultValue='' type='checkbox' />
+            <input
+              id='3-5-3'
+              name='group3-5'
+              defaultValue='twilight'
+              type='checkbox'
+            />
           </div>
           <div id='opt3-5-4' className='multiOpt group3-5'>
             <label id='label3-5-4' htmlFor='3-5-4'>
               夜<span className='lastLetterNoSpacing'>晚</span>
             </label>
-            <input id='3-5-4' name='group3-5' defaultValue='' type='checkbox' />
+            <input
+              id='3-5-4'
+              name='group3-5'
+              defaultValue='evening'
+              type='checkbox'
+            />
           </div>
           <div id='opt3-5-5' className='multiOpt group3-5'>
             <label id='label3-5-5' htmlFor='3-5-5'>
               深夜/凌<span className='lastLetterNoSpacing'>晨</span>
             </label>
-            <input id='3-5-5' name='group3-5' defaultValue='' type='checkbox' />
+            <input
+              id='3-5-5'
+              name='group3-5'
+              defaultValue='night'
+              type='checkbox'
+            />
           </div>
           <button className='forgetBtn' id='3-5'>
             不记得<span className='lastLetterNoSpacing'>了</span>

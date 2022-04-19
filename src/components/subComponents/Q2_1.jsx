@@ -10,31 +10,56 @@ class Q2_1 extends Component {
             <label id='label2-1-1' htmlFor='2-1-1'>
               噩<span className='lastLetterNoSpacing'>梦</span>
             </label>
-            <input id='2-1-1' name='group2-1' defaultValue='' type='radio' />
+            <input
+              id='2-1-1'
+              name='group2-1'
+              defaultValue='nightmare'
+              type='radio'
+            />
           </div>
           <div id='opt2-1-2' className='singleOpt group2-1'>
             <label id='label2-1-2' htmlFor='2-1-2'>
               不好的<span className='lastLetterNoSpacing'>梦</span>
             </label>
-            <input id='2-1-2' name='group2-1' defaultValue='' type='radio' />
+            <input
+              id='2-1-2'
+              name='group2-1'
+              defaultValue='badDream'
+              type='radio'
+            />
           </div>
           <div id='opt2-1-3' className='singleOpt group2-1'>
             <label id='label2-1-3' htmlFor='2-1-3'>
               中性<span className='lastLetterNoSpacing'>梦</span>
             </label>
-            <input id='2-1-3' name='group2-1' defaultValue='' type='radio' />
+            <input
+              id='2-1-3'
+              name='group2-1'
+              defaultValue='neutralDream'
+              type='radio'
+            />
           </div>
           <div id='opt2-1-4' className='singleOpt group2-1'>
             <label id='label2-1-4' htmlFor='2-1-4'>
               好<span className='lastLetterNoSpacing'>梦</span>
             </label>
-            <input id='2-1-4' name='group2-1' defaultValue='' type='radio' />
+            <input
+              id='2-1-4'
+              name='group2-1'
+              defaultValue='goodDream'
+              type='radio'
+            />
           </div>
           <div id='opt2-1-5' className='singleOpt group2-1'>
             <label id='label2-1-5' htmlFor='2-1-5'>
               美<span className='lastLetterNoSpacing'>梦</span>
             </label>
-            <input id='2-1-5' name='group2-1' defaultValue='' type='radio' />
+            <input
+              id='2-1-5'
+              name='group2-1'
+              defaultValue='sweetDream'
+              type='radio'
+            />
           </div>
           <p className='promptTag hide' id='prompt2-1'>
             *请选择<span className='lastLetterNoSpacing'>*</span>

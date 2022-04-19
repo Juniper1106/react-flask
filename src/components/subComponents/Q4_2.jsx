@@ -11,55 +11,100 @@ class Q4_2 extends Component {
             <label id='label4-2-1' htmlFor='4-2-1'>
               懊<span className='lastLetterNoSpacing'>悔</span>
             </label>
-            <input id='4-2-1' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-1'
+              name='group4-2'
+              defaultValue='regret'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-2' className='multiTag group4-2'>
             <label id='label4-2-2' htmlFor='4-2-2'>
               悲<span className='lastLetterNoSpacing'>伤</span>
             </label>
-            <input id='4-2-2' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-2'
+              name='group4-2'
+              defaultValue='sad'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-3' className='multiTag group4-2'>
             <label id='label4-2-3' htmlFor='4-2-3'>
               鄙<span className='lastLetterNoSpacing'>夷</span>
             </label>
-            <input id='4-2-3' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-3'
+              name='group4-2'
+              defaultValue='scornful'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-4' className='multiTag group4-2'>
             <label id='label4-2-4' htmlFor='4-2-4'>
               不<span className='lastLetterNoSpacing'>满</span>
             </label>
-            <input id='4-2-4' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-4'
+              name='group4-2'
+              defaultValue='dissatisfied'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-5' className='multiTag group4-2'>
             <label id='label4-2-5' htmlFor='4-2-5'>
               烦<span className='lastLetterNoSpacing'>躁</span>
             </label>
-            <input id='4-2-5' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-5'
+              name='group4-2'
+              defaultValue='edgy'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-6' className='multiTag group4-2'>
             <label id='label4-2-6' htmlFor='4-2-6'>
               悔<span className='lastLetterNoSpacing'>恨</span>
             </label>
-            <input id='4-2-6' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-6'
+              name='group4-2'
+              defaultValue='remorse'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-7' className='multiTag group4-2'>
             <label id='label4-2-7' htmlFor='4-2-7'>
               嫉<span className='lastLetterNoSpacing'>妒</span>
             </label>
-            <input id='4-2-7' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-7'
+              name='group4-2'
+              defaultValue='jealous'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-8' className='multiTag group4-2'>
             <label id='label4-2-8' htmlFor='4-2-8'>
               焦<span className='lastLetterNoSpacing'>虑</span>
             </label>
-            <input id='4-2-8' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-8'
+              name='group4-2'
+              defaultValue='anxious'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-9' className='multiTag group4-2'>
             <label id='label4-2-9' htmlFor='4-2-9'>
               恐<span className='lastLetterNoSpacing'>惧</span>
             </label>
-            <input id='4-2-9' name='group4-2' defaultValue='' type='checkbox' />
+            <input
+              id='4-2-9'
+              name='group4-2'
+              defaultValue='scared'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-2-10' className='multiTag group4-2'>
             <label id='label4-2-10' htmlFor='4-2-10'>
@@ -68,7 +113,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-10'
               name='group4-2'
-              defaultValue=''
+              defaultValue='sentimental'
               type='checkbox'
             />
           </div>
@@ -79,7 +124,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-11'
               name='group4-2'
-              defaultValue=''
+              defaultValue='angry'
               type='checkbox'
             />
           </div>
@@ -90,7 +135,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-12'
               name='group4-2'
-              defaultValue=''
+              defaultValue='bereft'
               type='checkbox'
             />
           </div>
@@ -101,7 +146,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-13'
               name='group4-2'
-              defaultValue=''
+              defaultValue='discouragement'
               type='checkbox'
             />
           </div>
@@ -112,7 +157,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-14'
               name='group4-2'
-              defaultValue=''
+              defaultValue='shame'
               type='checkbox'
             />
           </div>
@@ -123,7 +168,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-15'
               name='group4-2'
-              defaultValue=''
+              defaultValue='disgusting'
               type='checkbox'
             />
           </div>
@@ -134,7 +179,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-16'
               name='group4-2'
-              defaultValue=''
+              defaultValue='worry'
               type='checkbox'
             />
           </div>
@@ -145,7 +190,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-17'
               name='group4-2'
-              defaultValue=''
+              defaultValue='hate'
               type='checkbox'
             />
           </div>
@@ -156,7 +201,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-18'
               name='group4-2'
-              defaultValue=''
+              defaultValue='guilty'
               type='checkbox'
             />
           </div>

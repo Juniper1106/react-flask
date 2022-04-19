@@ -11,55 +11,100 @@ class Q4_1 extends Component {
             <label id='label4-1-1' htmlFor='4-1-1'>
               爱<span className='lastLetterNoSpacing'>情</span>
             </label>
-            <input id='4-1-1' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-1'
+              name='group4-1'
+              defaultValue='love'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-2' className='multiTag group4-1'>
             <label id='label4-1-2' htmlFor='4-1-2'>
               保护<span className='lastLetterNoSpacing'>欲</span>
             </label>
-            <input id='4-1-2' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-2'
+              name='group4-1'
+              defaultValue='protectiveness'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-3' className='multiTag group4-1'>
             <label id='label4-1-3' htmlFor='4-1-3'>
               崇<span className='lastLetterNoSpacing'>敬</span>
             </label>
-            <input id='4-1-3' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-3'
+              name='group4-1'
+              defaultValue='respect'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-4' className='multiTag group4-1'>
             <label id='label4-1-4' htmlFor='4-1-4'>
               感<span className='lastLetterNoSpacing'>恩</span>
             </label>
-            <input id='4-1-4' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-4'
+              name='group4-1'
+              defaultValue='gratitude'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-5' className='multiTag group4-1'>
             <label id='label4-1-5' htmlFor='4-1-5'>
               关<span className='lastLetterNoSpacing'>心</span>
             </label>
-            <input id='4-1-5' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-5'
+              name='group4-1'
+              defaultValue='care'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-6' className='multiTag group4-1'>
             <label id='label4-1-6' htmlFor='4-1-6'>
               好<span className='lastLetterNoSpacing'>奇</span>
             </label>
-            <input id='4-1-6' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-6'
+              name='group4-1'
+              defaultValue='curiosity'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-7' className='multiTag group4-1'>
             <label id='label4-1-7' htmlFor='4-1-7'>
               惊<span className='lastLetterNoSpacing'>喜</span>
             </label>
-            <input id='4-1-7' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-7'
+              name='group4-1'
+              defaultValue='surprise'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-8' className='multiTag group4-1'>
             <label id='label4-1-8' htmlFor='4-1-8'>
               开<span className='lastLetterNoSpacing'>心</span>
             </label>
-            <input id='4-1-8' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-8'
+              name='group4-1'
+              defaultValue='happy'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-9' className='multiTag group4-1'>
             <label id='label4-1-9' htmlFor='4-1-9'>
               乐<span className='lastLetterNoSpacing'>观</span>
             </label>
-            <input id='4-1-9' name='group4-1' defaultValue='' type='checkbox' />
+            <input
+              id='4-1-9'
+              name='group4-1'
+              defaultValue='optimistic'
+              type='checkbox'
+            />
           </div>
           <div id='opt4-1-10' className='multiTag group4-1'>
             <label id='label4-1-10' htmlFor='4-1-10'>
@@ -68,7 +113,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-10'
               name='group4-1'
-              defaultValue=''
+              defaultValue='expectancy'
               type='checkbox'
             />
           </div>
@@ -79,7 +124,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-11'
               name='group4-1'
-              defaultValue=''
+              defaultValue='leisured'
               type='checkbox'
             />
           </div>
@@ -90,7 +135,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-12'
               name='group4-1'
-              defaultValue=''
+              defaultValue='passion'
               type='checkbox'
             />
           </div>
@@ -101,7 +146,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-13'
               name='group4-1'
-              defaultValue=''
+              defaultValue='favor'
               type='checkbox'
             />
           </div>
@@ -112,7 +157,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-14'
               name='group4-1'
-              defaultValue=''
+              defaultValue='trust'
               type='checkbox'
             />
           </div>
@@ -123,7 +168,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-15'
               name='group4-1'
-              defaultValue=''
+              defaultValue='friendliness'
               type='checkbox'
             />
           </div>
@@ -134,7 +179,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-16'
               name='group4-1'
-              defaultValue=''
+              defaultValue='confident'
               type='checkbox'
             />
           </div>

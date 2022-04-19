@@ -11,7 +11,12 @@ class Q2_4 extends Component {
             <label id='label2-4-1' htmlFor='2-4-1'>
               是
             </label>
-            <input id='2-4-1' name='group2-4' defaultValue='' type='radio' />
+            <input
+              id='2-4-1'
+              name='group2-4'
+              defaultValue='loop'
+              type='radio'
+            />
           </div>
           <div id='opt2-4-2' className='singleOpt group2-4'>
             <label id='label2-4-2' htmlFor='2-4-2'>

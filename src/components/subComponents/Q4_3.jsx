@@ -14,7 +14,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-1'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='puzzled'
               type='checkbox'
             />
           </div>
@@ -25,7 +25,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-2'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='lost'
               type='checkbox'
             />
           </div>
@@ -36,7 +36,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-3'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='embarrassed'
               type='checkbox'
             />
           </div>
@@ -47,7 +47,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-4'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='neglect'
               type='checkbox'
             />
           </div>
@@ -58,7 +58,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-5'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='nostalgia'
               type='checkbox'
             />
           </div>
@@ -69,7 +69,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-6'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='determined'
               type='checkbox'
             />
           </div>
@@ -80,7 +80,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-7'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='alarmed'
               type='checkbox'
             />
           </div>
@@ -91,7 +91,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-8'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='calm'
               type='checkbox'
             />
           </div>
@@ -102,7 +102,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-9'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='indifference'
               type='checkbox'
             />
           </div>
@@ -113,7 +113,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-10'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='peace'
               type='checkbox'
             />
           </div>
@@ -124,7 +124,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-11'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='submission'
               type='checkbox'
             />
           </div>
@@ -135,7 +135,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-12'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='boring'
               type='checkbox'
             />
           </div>
@@ -146,7 +146,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-13'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='heart-tugging'
               type='checkbox'
             />
           </div>
@@ -157,7 +157,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-14'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='doubt'
               type='checkbox'
             />
           </div>
@@ -168,7 +168,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-15'
               name='multi group4-3'
-              defaultValue=''
+              defaultValue='focused'
               type='checkbox'
             />
           </div>
