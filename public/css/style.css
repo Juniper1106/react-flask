@@ -74,6 +74,7 @@ body {
   width: 150px;
   height: 64px;
   cursor: pointer;
+  z-index: 999;
 }
 
 .logo:hover {

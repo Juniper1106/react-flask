@@ -14,7 +14,10 @@ class Q1_2 extends Component {
               rows={4}
               placeholder='我梦见...'
               maxLength={100}
-              defaultValue={""}
+              autoComplete='off'
+              name='description'
+              // value='test'
+              onChange={this.props.onSetDes}
             />
             <label
               htmlFor='description'
@@ -26,7 +29,10 @@ class Q1_2 extends Component {
         </div>
         <div className='containerB' id='bottomBtn1-2'>
           <div className='bottomBtnContainer'>
-            <button className='btn--large continue' id='continueBtnInPage1'>
+            <button
+              className='btn--large continue'
+              id='continueBtnInPage1'
+              onClick={this.props.isWrap}>
               继续
             </button>
             <button className='btn--small prev' id='prev1-2' />

@@ -18,12 +18,13 @@ class ResultPage extends Component {
           </div>
           <h2>{this.props.title}</h2>
           <textarea
-            readOnly=''
+            readOnly
             id='resultTxt'
             className='resultTxt'
-            defaultValue={
-              "以前住过的地方\n有一大片树林\n还有老房子\n在里面很开心的生活\n梦里妈妈在忙活他的事情\n我在静静的看着\n很幸福的样子\n梦里妈妈在忙活他的事情\n我在静静的看着\n很幸福的样子\n            "
-            }
+            value={this.props.content}
+            // defaultValue={
+            //   "以前住过的地方\n有一大片树林\n还有老房子\n在里面很开心的生活\n梦里妈妈在忙活他的事情\n我在静静的看着\n很幸福的样子\n梦里妈妈在忙活他的事情\n我在静静的看着\n很幸福的样子\n            "
+            // }
           />
         </div>
         <div className='containerB containerB--result' id='bottomBtnResult'>

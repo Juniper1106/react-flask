@@ -9,10 +9,13 @@ class Page2 extends Component {
   render() {
     return (
       <React.Fragment>
-        <Q2_1></Q2_1>
-        <Q2_2></Q2_2>
-        <Q2_3></Q2_3>
-        <Q2_4></Q2_4>
+        <Q2_1 />
+        <Q2_2 />
+        <Q2_3 />
+        <Q2_4
+          optClick={this.props.optClick}
+          // isLoop={this.props.isLoop}
+        />
       </React.Fragment>
     );
   }

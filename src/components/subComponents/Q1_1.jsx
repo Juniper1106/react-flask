@@ -5,7 +5,7 @@ class Q1_1 extends Component {
     return (
       <div className='containerQ hide' id='page1-1'>
         <div className='question' id='question1-1'>
-          <h2>为您首先想到的梦境起个名字吧：{this.props.value}</h2>
+          <h2>为您首先想到的梦境起个名字吧</h2>
           <div className='titleInputGroup'>
             <input
               id='dreamTitle'
@@ -14,8 +14,9 @@ class Q1_1 extends Component {
               placeholder='我的梦境'
               maxLength={20}
               autoComplete='off'
+              name='title'
               // value={this.props.value}
-              // onChange={this.props.onSetTitle}
+              onChange={this.props.onSetTitle}
             />
             <label htmlFor='dreamTitle' id='titleCount' className='titleCount'>
               0/20

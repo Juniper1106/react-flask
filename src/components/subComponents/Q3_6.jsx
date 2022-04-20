@@ -14,15 +14,21 @@ class Q3_6 extends Component {
             <input
               id='3-6-1'
               name='group3-6'
-              defaultValue='supernatural'
+              value='fantasy'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt3-6-2' className='singleOpt group3-6'>
             <label id='label3-6-2' htmlFor='3-6-2'>
               否
             </label>
-            <input id='3-6-2' name='group3-6' defaultValue='' type='radio' />
+            <input
+              id='3-6-2'
+              name='group3-6'
+              type='radio'
+              onClick={this.props.optClick}
+            />
           </div>
           <p className='promptTag hide' id='prompt3-6'>
             *请选择<span className='lastLetterNoSpacing'>*</span>
@@ -30,7 +36,11 @@ class Q3_6 extends Component {
         </div>
         <div className='containerB' id='bottomBtn3-6'>
           <div className='bottomBtnContainer'>
-            <button className='btn--large continue' id='continueBtnInPage3'>
+            <button
+              className='btn--large continue'
+              id='continueBtnInPage3'
+              // onClick={this.props.test}
+            >
               继续
             </button>
             <button className='btn--small prev' id='prev3-6' />

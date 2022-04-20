@@ -11,12 +11,15 @@ class Page3 extends Component {
   render() {
     return (
       <React.Fragment>
-        <Q3_1></Q3_1>
-        <Q3_2></Q3_2>
-        <Q3_3></Q3_3>
-        <Q3_4></Q3_4>
-        <Q3_5></Q3_5>
-        <Q3_6></Q3_6>
+        <Q3_1 />
+        <Q3_2 />
+        <Q3_3 />
+        <Q3_4 />
+        <Q3_5 />
+        <Q3_6
+          optClick={this.props.optClick}
+          // test={this.props.test}
+        />
       </React.Fragment>
     );
   }

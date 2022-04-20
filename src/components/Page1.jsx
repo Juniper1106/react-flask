@@ -6,8 +6,8 @@ class Page1 extends Component {
   render() {
     return (
       <React.Fragment>
-        <Q1_1 value={this.props.value} />
-        <Q1_2 />
+        <Q1_1 onSetTitle={this.props.onInputTitle} />
+        <Q1_2 onSetDes={this.props.onInputDes} isWrap={this.props.isWrap} />
       </React.Fragment>
     );
   }
