@@ -214,14 +214,19 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
+  sendData = async () => {
+    const info = { ...this.state.dream };
+    console.log("sent: ", info);
+    const { data: post } = await axios.post(
+      "http://127.0.0.1:5000/members",
+      info
+    );
+    console.log("My dream: ", post);
+  };
+
   test = () => {
     console.log(this.state);
   };
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("prevProps", prevProps);
-    console.log("prevState", prevState);
-  }
 
   render() {
     return (
@@ -267,7 +272,11 @@ class App extends React.Component {
           optClick={this.handleBoolOptClick3}
         />
         <Page4 chooseEmo={this.handleMultiTagClick} />
-        <Q5_1 handleForget={this.handleForget} test={this.test} />
+        <Q5_1
+          handleForget={this.handleForget}
+          test={this.test}
+          sendData={this.sendData}
+        />
         <ResultPage
           title={this.state.dream.dreamTitle}
           content={this.state.dream.description}

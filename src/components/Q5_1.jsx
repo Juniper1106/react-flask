@@ -20,8 +20,9 @@ class Q5_1 extends Component {
           <button
             className='skipBtn'
             id='5-1'
-            onClick={this.props.handleForget}
-            onMouseOver={this.props.test}>
+            onMouseEnter={this.props.handleForget}
+            onClick={this.props.sendData}
+            onMouseLeave={this.props.test}>
             跳<span className='lastLetterNoSpacing'>过</span>
           </button>
         </div>
@@ -30,7 +31,8 @@ class Q5_1 extends Component {
             <button
               className='btn--small next'
               id='next5-1'
-              onClick={this.props.handleForget}
+              onMouseEnter={this.props.handleForget}
+              onClick={this.props.sendData}
             />
             <button className='btn--large back' id='backBtnInPage5'>
               返回
