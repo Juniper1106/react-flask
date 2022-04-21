@@ -62,14 +62,14 @@ const apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
 class App extends React.Component {
   state = {
     dream: {
-      title: "",
+      dreamTitle: "",
       description: "",
       type: "",
       loop: false,
-      // character: [],
-      // relation: [],
-      // action: [],
-      // scene: [],
+      character: "",
+      relation: "",
+      action: "",
+      scene: "",
       weather: [],
       time: [],
       fantasy: false,
@@ -81,16 +81,14 @@ class App extends React.Component {
     },
   };
 
-  updateTitle = (e) => {
-    let dream = { ...this.state.dream };
-    dream.title = e.target.value;
-    this.setState({ dream });
-  };
-
-  updateDes = (e) => {
-    let dream = { ...this.state.dream };
-    dream.description = e.target.value;
-    this.setState({ dream });
+  handleInput = (e) => {
+    let id = e.target.id;
+    this.setState((state) => ({
+      dream: {
+        ...state.dream,
+        [id]: e.target.value,
+      },
+    }));
   };
 
   isChinesePunc = () => {
@@ -256,26 +254,22 @@ class App extends React.Component {
         </div>
 
         <HomePage></HomePage>
-        <Page1
-          onInputTitle={this.updateTitle}
-          onInputDes={this.updateDes}
-          isWrap={this.isChinesePunc}
-        />
+        <Page1 handleInput={this.handleInput} isWrap={this.isChinesePunc} />
         <Page2
           singleOptClick={this.handleSingleOptClick}
           optClick={this.handleBoolOptClick2}
         />
         <Page3
+          handleInput={this.handleInput}
           multiOptClick3_4={this.handleMultiOptClick3_4}
           multiOptClick3_5={this.handleMultiOptClick3_5}
           forgetClick={this.handleForgetClick}
           optClick={this.handleBoolOptClick3}
-          test={this.test}
         />
-        <Page4 chooseEmo={this.handleMultiTagClick} test={this.test} />
+        <Page4 chooseEmo={this.handleMultiTagClick} />
         <Q5_1 handleForget={this.handleForget} test={this.test} />
         <ResultPage
-          title={this.state.dream.title}
+          title={this.state.dream.dreamTitle}
           content={this.state.dream.description}
         />
       </React.Fragment>

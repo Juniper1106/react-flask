@@ -15,8 +15,7 @@ class Q1_1 extends Component {
               maxLength={20}
               autoComplete='off'
               name='title'
-              // value={this.props.value}
-              onChange={this.props.onSetTitle}
+              onChange={this.props.handleInput}
             />
             <label htmlFor='dreamTitle' id='titleCount' className='titleCount'>
               0/20

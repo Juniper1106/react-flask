@@ -227,11 +227,7 @@ class Q4_2 extends Component {
         <div className='containerB' id='bottomBtn4-2'>
           <div className='bottomBtnContainer'>
             <button className='btn--small prev' id='prev4-2' />
-            <button
-              className='btn--small next'
-              id='next4-2'
-              onClick={this.props.test}
-            />
+            <button className='btn--small next' id='next4-2' />
           </div>
         </div>
       </div>

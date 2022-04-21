@@ -16,7 +16,7 @@ class Q3_2 extends Component {
               cols={30}
               rows={4}
               placeholder='例：A与B是恋人/同学/敌对关系'
-              defaultValue={""}
+              onChange={this.props.handleInput}
             />
           </div>
           <div />
@@ -27,7 +27,7 @@ class Q3_2 extends Component {
               cols={32}
               rows={4}
               placeholder='例：吃饭、运动'
-              defaultValue={""}
+              onChange={this.props.handleInput}
             />
           </div>
           <p className='promptTag hide' id='prompt3-2'>

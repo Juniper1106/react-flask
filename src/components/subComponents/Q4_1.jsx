@@ -202,11 +202,7 @@ class Q4_1 extends Component {
         </div>
         <div className='containerB' id='bottomBtn4-1'>
           <div className='bottomBtnContainer'>
-            <button
-              className='btn--small next'
-              id='next4-1'
-              onClick={this.props.test}
-            />
+            <button className='btn--small next' id='next4-1' />
             <button className='btn--large back' id='backBtnInPage4'>
               返回
             </button>

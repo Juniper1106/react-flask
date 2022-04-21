@@ -16,8 +16,7 @@ class Q1_2 extends Component {
               maxLength={100}
               autoComplete='off'
               name='description'
-              // value='test'
-              onChange={this.props.onSetDes}
+              onChange={this.props.handleInput}
             />
             <label
               htmlFor='description'

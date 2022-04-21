@@ -14,7 +14,7 @@ class Q3_3 extends Component {
               cols={65}
               rows={4}
               placeholder='例：森林、学校、太空'
-              defaultValue={""}
+              onChange={this.props.handleInput}
             />
           </div>
           <p className='promptTag hide' id='prompt3-3'>
