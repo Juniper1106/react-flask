@@ -64,14 +64,14 @@ class App extends React.Component {
     dream: {
       title: "",
       description: "",
-      // type: "",
+      type: "",
       loop: false,
       // character: [""],
       // relation: [""],
       // action: [""],
       // scene: [""],
-      // weather: "",
-      // time: "",
+      // weather: [""],
+      // time: [""],
       fantasy: false,
       // emotions: [""],
     },
@@ -109,6 +109,12 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
+  handleSingleOptClick = (e) => {
+    var dream = { ...this.state.dream };
+    dream.type = e.target.value;
+    this.setState({ dream });
+  };
+
   handleBoolOptClick2 = (e) => {
     const id = e.target.id;
     var dream = { ...this.state.dream };
@@ -120,10 +126,6 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
-  isLoop = () => {
-    console.log(this.state);
-  };
-
   handleBoolOptClick3 = (e) => {
     const id = e.target.id;
     var dream = { ...this.state.dream };
@@ -133,6 +135,10 @@ class App extends React.Component {
       dream.fantasy = false;
     }
     this.setState({ dream });
+  };
+
+  test = () => {
+    console.log(this.state);
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -177,13 +183,11 @@ class App extends React.Component {
           isWrap={this.isChinesePunc}
         />
         <Page2
+          singleOptClick={this.handleSingleOptClick}
           optClick={this.handleBoolOptClick2}
-          // isLoop={this.isLoop}
+          test={this.test}
         />
-        <Page3
-          optClick={this.handleBoolOptClick3}
-          // test={this.isLoop}
-        />
+        <Page3 optClick={this.handleBoolOptClick3} />
         <Page4 />
         <Q5_1 />
         <ResultPage

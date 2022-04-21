@@ -13,8 +13,9 @@ class Q2_1 extends Component {
             <input
               id='2-1-1'
               name='group2-1'
-              defaultValue='nightmare'
+              value='nightmare'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt2-1-2' className='singleOpt group2-1'>
@@ -24,8 +25,9 @@ class Q2_1 extends Component {
             <input
               id='2-1-2'
               name='group2-1'
-              defaultValue='badDream'
+              value='badDream'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt2-1-3' className='singleOpt group2-1'>
@@ -35,8 +37,9 @@ class Q2_1 extends Component {
             <input
               id='2-1-3'
               name='group2-1'
-              defaultValue='neutralDream'
+              value='neutralDream'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt2-1-4' className='singleOpt group2-1'>
@@ -46,8 +49,9 @@ class Q2_1 extends Component {
             <input
               id='2-1-4'
               name='group2-1'
-              defaultValue='goodDream'
+              value='goodDream'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt2-1-5' className='singleOpt group2-1'>
@@ -57,8 +61,9 @@ class Q2_1 extends Component {
             <input
               id='2-1-5'
               name='group2-1'
-              defaultValue='sweetDream'
+              value='sweetDream'
               type='radio'
+              onClick={this.props.optClick}
             />
           </div>
           <p className='promptTag hide' id='prompt2-1'>
@@ -67,7 +72,11 @@ class Q2_1 extends Component {
         </div>
         <div className='containerB' id='bottomBtn2-1'>
           <div className='bottomBtnContainer'>
-            <button className='btn--small next' id='next2-1' />
+            <button
+              className='btn--small next'
+              id='next2-1'
+              onClick={this.props.test}
+            />
             <button className='btn--large back' id='backBtnInPage2'>
               返回
             </button>

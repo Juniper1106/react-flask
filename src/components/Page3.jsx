@@ -16,10 +16,7 @@ class Page3 extends Component {
         <Q3_3 />
         <Q3_4 />
         <Q3_5 />
-        <Q3_6
-          optClick={this.props.optClick}
-          // test={this.props.test}
-        />
+        <Q3_6 optClick={this.props.optClick} />
       </React.Fragment>
     );
   }

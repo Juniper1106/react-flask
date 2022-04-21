@@ -15,7 +15,6 @@ class Q2_4 extends Component {
               name='group2-4'
               value='loop'
               type='radio'
-              // defaultChecked={false}
               onClick={this.props.optClick}
             />
           </div>
@@ -28,7 +27,6 @@ class Q2_4 extends Component {
               name='group2-4'
               defaultValue=''
               type='radio'
-              // defaultChecked={false}
               onClick={this.props.optClick}
             />
           </div>
@@ -38,11 +36,7 @@ class Q2_4 extends Component {
         </div>
         <div className='containerB' id='bottomBtn2-4'>
           <div className='bottomBtnContainer'>
-            <button
-              className='btn--large continue'
-              id='continueBtnInPage2'
-              // onClick={this.props.isLoop}
-            >
+            <button className='btn--large continue' id='continueBtnInPage2'>
               继续
             </button>
             <button className='btn--small prev' id='prev2-4' />

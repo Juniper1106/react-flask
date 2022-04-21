@@ -9,13 +9,10 @@ class Page2 extends Component {
   render() {
     return (
       <React.Fragment>
-        <Q2_1 />
+        <Q2_1 optClick={this.props.singleOptClick} test={this.props.test} />
         <Q2_2 />
         <Q2_3 />
-        <Q2_4
-          optClick={this.props.optClick}
-          // isLoop={this.props.isLoop}
-        />
+        <Q2_4 optClick={this.props.optClick} />
       </React.Fragment>
     );
   }
