@@ -14,8 +14,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-1'
               name='multi group4-3'
-              defaultValue='puzzled'
+              value='puzzled'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-2' className='multiTag group4-3'>
@@ -25,8 +26,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-2'
               name='multi group4-3'
-              defaultValue='lost'
+              value='lost'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-3' className='multiTag group4-3'>
@@ -36,8 +38,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-3'
               name='multi group4-3'
-              defaultValue='embarrassed'
+              value='embarrassed'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-4' className='multiTag group4-3'>
@@ -47,8 +50,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-4'
               name='multi group4-3'
-              defaultValue='neglect'
+              value='neglect'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-5' className='multiTag group4-3'>
@@ -58,8 +62,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-5'
               name='multi group4-3'
-              defaultValue='nostalgia'
+              value='nostalgia'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-6' className='multiTag group4-3'>
@@ -69,8 +74,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-6'
               name='multi group4-3'
-              defaultValue='determined'
+              value='determined'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-7' className='multiTag group4-3'>
@@ -80,8 +86,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-7'
               name='multi group4-3'
-              defaultValue='alarmed'
+              value='alarmed'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-8' className='multiTag group4-3'>
@@ -91,8 +98,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-8'
               name='multi group4-3'
-              defaultValue='calm'
+              value='calm'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-9' className='multiTag group4-3'>
@@ -102,8 +110,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-9'
               name='multi group4-3'
-              defaultValue='indifference'
+              value='indifference'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-10' className='multiTag group4-3'>
@@ -113,8 +122,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-10'
               name='multi group4-3'
-              defaultValue='peace'
+              value='peace'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-11' className='multiTag group4-3'>
@@ -124,8 +134,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-11'
               name='multi group4-3'
-              defaultValue='submission'
+              value='submission'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-12' className='multiTag group4-3'>
@@ -135,8 +146,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-12'
               name='multi group4-3'
-              defaultValue='boring'
+              value='boring'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-13' className='multiTag group4-3'>
@@ -146,8 +158,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-13'
               name='multi group4-3'
-              defaultValue='heart-tugging'
+              value='heart-tugging'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-14' className='multiTag group4-3'>
@@ -157,8 +170,9 @@ class Q4_3 extends Component {
             <input
               id='4-3-14'
               name='multi group4-3'
-              defaultValue='doubt'
+              value='doubt'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-15' className='multiTag group4-3'>
@@ -168,15 +182,20 @@ class Q4_3 extends Component {
             <input
               id='4-3-15'
               name='multi group4-3'
-              defaultValue='focused'
+              value='focused'
               type='checkbox'
+              onClick={this.props.optClick}
             />
           </div>
         </div>
         <div className='containerB' id='bottomBtn4-3'>
           <div className='bottomBtnContainer'>
             <button className='btn--small prev' id='prev4-3' />
-            <button className='btn--small next' id='next4-3' />
+            <button
+              className='btn--small next'
+              id='next4-3'
+              onClick={this.props.test}
+            />
           </div>
         </div>
       </div>

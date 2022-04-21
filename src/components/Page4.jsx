@@ -9,10 +9,10 @@ class Page4 extends Component {
   render() {
     return (
       <React.Fragment>
-        <Q4_1></Q4_1>
-        <Q4_2></Q4_2>
-        <Q4_3></Q4_3>
-        <Q4_4></Q4_4>
+        <Q4_1 optClick={this.props.chooseEmo} test={this.props.test} />
+        <Q4_2 optClick={this.props.chooseEmo} test={this.props.test} />
+        <Q4_3 optClick={this.props.chooseEmo} test={this.props.test} />
+        <Q4_4 />
       </React.Fragment>
     );
   }

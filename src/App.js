@@ -73,7 +73,7 @@ class App extends React.Component {
       weather: [],
       time: [],
       fantasy: false,
-      // emotions: [],
+      emotions: [],
     },
     isForget: {
       "3-4": false,
@@ -172,6 +172,19 @@ class App extends React.Component {
     this.setState((state) => ({ isForget: { ...state.isForget, [id]: true } }));
   };
 
+  handleMultiTagClick = (e) => {
+    let dream = { ...this.state.dream };
+
+    if (e.target.checked && !dream.emotions.includes(e.target.value)) {
+      dream.emotions.push(e.target.value);
+    } else if (!e.target.checked && dream.emotions.includes(e.target.value)) {
+      let i = dream.emotions.indexOf(e.target.value);
+      dream.emotions.splice(i, 1);
+    }
+
+    this.setState({ dream });
+  };
+
   handleForget = (e) => {
     let dream = { ...this.state.dream };
 
@@ -259,7 +272,7 @@ class App extends React.Component {
           optClick={this.handleBoolOptClick3}
           test={this.test}
         />
-        <Page4 />
+        <Page4 chooseEmo={this.handleMultiTagClick} test={this.test} />
         <Q5_1 handleForget={this.handleForget} test={this.test} />
         <ResultPage
           title={this.state.dream.title}
