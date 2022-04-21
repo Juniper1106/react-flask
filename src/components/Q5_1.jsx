@@ -17,13 +17,21 @@ class Q5_1 extends Component {
               defaultValue={""}
             />
           </div>
-          <button className='skipBtn' id='5-1'>
+          <button
+            className='skipBtn'
+            id='5-1'
+            onClick={this.props.handleForget}
+            onMouseOver={this.props.test}>
             跳<span className='lastLetterNoSpacing'>过</span>
           </button>
         </div>
         <div className='containerB' id='bottomBtn5-1'>
           <div className='bottomBtnContainer'>
-            <button className='btn--small next' id='next5-1' />
+            <button
+              className='btn--small next'
+              id='next5-1'
+              onClick={this.props.handleForget}
+            />
             <button className='btn--large back' id='backBtnInPage5'>
               返回
             </button>

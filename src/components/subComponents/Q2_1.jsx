@@ -72,11 +72,7 @@ class Q2_1 extends Component {
         </div>
         <div className='containerB' id='bottomBtn2-1'>
           <div className='bottomBtnContainer'>
-            <button
-              className='btn--small next'
-              id='next2-1'
-              onClick={this.props.test}
-            />
+            <button className='btn--small next' id='next2-1' />
             <button className='btn--large back' id='backBtnInPage2'>
               返回
             </button>

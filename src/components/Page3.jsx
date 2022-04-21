@@ -14,8 +14,16 @@ class Page3 extends Component {
         <Q3_1 />
         <Q3_2 />
         <Q3_3 />
-        <Q3_4 />
-        <Q3_5 />
+        <Q3_4
+          optClick={this.props.multiOptClick3_4}
+          forgetClick={this.props.forgetClick}
+          test={this.props.test}
+        />
+        <Q3_5
+          optClick={this.props.multiOptClick3_5}
+          forgetClick={this.props.forgetClick}
+          test={this.props.test}
+        />
         <Q3_6 optClick={this.props.optClick} />
       </React.Fragment>
     );
