@@ -879,7 +879,7 @@ $(document).ready(function () {
       $("#result").fadeIn(500);
       $("#result").removeClass("hide");
       $("#question5-1").attr("class", "question");
-      $("#resultPage").attr("class", "optQuestion grid-result");
+      $("#resultPage").attr("class", "resultArea grid-result");
       $("#1").animate({ left: "0px" });
       $("#2").animate({ left: "34px" });
       $("#3").animate({ left: "68px" });
@@ -895,11 +895,12 @@ $(document).ready(function () {
 
   // -------------result----------------
   // back to page5-1
+
   $("#prevInResultPage").click(function () {
     $("#question5-1").attr("class", "question");
     $("#page5-1").fadeIn(500);
     $("#result").fadeOut(500);
-    $("#resultPage").attr("class", "optQuestion grid-result");
+    $("#resultPage").attr("class", "resultArea grid-result");
     $("#1").animate({ left: "0px" });
     $("#2").animate({ left: "34px" });
     $("#3").animate({ left: "68px" });
@@ -911,6 +912,7 @@ $(document).ready(function () {
     );
     $("#indicatorGroup").animate({ opacity: "1" }, "500ms");
   });
+
   // complete and back to home
   $("#complete").click(function () {
     if (confirm("即将回首页，填写的内容将被清空，确定回首页吗？") == true) {
