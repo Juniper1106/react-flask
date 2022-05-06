@@ -5,28 +5,32 @@ class Q4_4 extends Component {
   render() {
     return (
       <div className='containerQ hide' id='page4-4'>
-        <div className='question' id='question4-4'>
-          <h2>其他需补充的主要情绪...</h2>
-          <div className='descInputGroup'>
-            <textarea
-              id='emotion'
-              className='description'
-              cols={65}
-              rows={4}
-              placeholder='请输入上述选项中未出现但在您的梦中作为主要情绪出现的情绪'
-              defaultValue={""}
-            />
+        <div className='optQuestion grid-2x5' id='question4-4'>
+          <h2>您的性别是...</h2>
+          <div />
+          <div id='opt4-4-1' className='singleOpt group4-4'>
+            <label id='label4-4-1' htmlFor='4-4-1'>
+              男<span className='lastLetterNoSpacing'>性</span>
+            </label>
+            <input id='4-4-1' name='group4-4' defaultValue='' type='radio' />
           </div>
-          <button className='skipBtn' id='4-4'>
-            跳<span className='lastLetterNoSpacing'>过</span>
-          </button>
+          <div id='opt4-4-2' className='singleOpt group4-4'>
+            <label id='label4-4-2' htmlFor='4-4-2'>
+              女<span className='lastLetterNoSpacing'>性</span>
+            </label>
+            <input id='4-4-2' name='group4-4' defaultValue='' type='radio' />
+          </div>
+          <div id='opt4-4-3' className='singleOpt group4-4'>
+            <label id='label4-4-3' htmlFor='4-4-3'>
+              保<span className='lastLetterNoSpacing'>密</span>
+            </label>
+            <input id='4-4-3' name='group4-4' defaultValue='' type='radio' />
+          </div>
         </div>
         <div className='containerB' id='bottomBtn4-4'>
           <div className='bottomBtnContainer'>
-            <button className='btn--large continue' id='continueBtnInPage4'>
-              继续
-            </button>
             <button className='btn--small prev' id='prev4-4' />
+            <button className='btn--small next' id='next4-4' />
           </div>
         </div>
       </div>

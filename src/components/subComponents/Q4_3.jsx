@@ -4,7 +4,7 @@ class Q4_3 extends Component {
   state = {};
   render() {
     return (
-      <div className='containerQ hide' id='page4-3'>
+      <div className='containerQ' id='page4-3'>
         <div className='optQuestion grid-4x6' id='question4-3'>
           <h2>梦境中的中性情绪主要有...</h2>
           <div id='opt4-3-1' className='multiTag group4-3'>

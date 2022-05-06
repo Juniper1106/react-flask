@@ -782,7 +782,7 @@ $(document).ready(function () {
     $("#page4-4").removeClass("hide");
     $("#question4-4").attr(
       "class",
-      "question animate__animated animate__slideInRight"
+      "optQuestion grid-2x5 animate__animated animate__slideInRight"
     );
     $("#question4-4").animate({ opacity: "1" }, "500ms");
     $("#bottomBtn4-4").fadeIn(500);
@@ -796,22 +796,58 @@ $(document).ready(function () {
       "optQuestion grid-4x6 animate__animated animate__slideInLeft"
     );
     $("#question4-3").animate({ opacity: "1" }, "500ms");
-    $("#bottomBtn4-3").fadeIn(500);
 
     $("#question4-4").attr(
       "class",
-      "question animate__animated animate__slideOutRight"
+      "optQuestion grid-2x5 animate__animated animate__slideOutRight"
+    );
+    $("#question4-4").animate({ opacity: "0" }, "500ms");
+
+    $("#bottomBtn4-4").css("display", "none");
+    $("#bottomBtn4-3").css("display", "block");
+  });
+  // to page4-5
+  $("#next4-4").click(function () {
+    $("#question4-4").attr(
+      "class",
+      "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
     );
     $("#question4-4").animate({ opacity: "0" }, "500ms");
     $("#bottomBtn4-4").fadeOut(500);
+
+    $("#page4-5").removeClass("hide");
+    $("#question4-5").attr(
+      "class",
+      "question animate__animated animate__slideInRight"
+    );
+    $("#question4-5").animate({ opacity: "1" }, "500ms");
+    $("#bottomBtn4-5").fadeIn(500);
+  });
+
+  // ·············Q4-5·················
+  // back to page4-4
+  $("#prev4-5").click(function () {
+    $("#question4-4").attr(
+      "class",
+      "optQuestion grid-2x5 animate__animated animate__slideInLeft"
+    );
+    $("#question4-4").animate({ opacity: "1" }, "500ms");
+    $("#bottomBtn4-4").fadeIn(500);
+
+    $("#question4-5").attr(
+      "class",
+      "question animate__animated animate__slideOutRight"
+    );
+    $("#question4-5").animate({ opacity: "0" }, "500ms");
+    $("#bottomBtn4-5").fadeOut(500);
   });
   // skip button
-  $("#4-4").click(function () {
+  $("#4-5").click(function () {
     $("#extra-background").attr("class", "extra-background page5");
     $("#page5-1").fadeIn(500);
-    $("#page4-4").fadeOut(500);
+    $("#page4-5").fadeOut(500);
     $("#page5-1").removeClass("hide");
-    $("#question4-4").attr("class", "question");
+    $("#question4-5").attr("class", "question");
     $("#question5-1").attr("class", "question");
     pageFlag = 5;
     $("#1").animate({ left: "0px" });
@@ -823,10 +859,10 @@ $(document).ready(function () {
   // to page5-1
   $("#continueBtnInPage4").click(function () {
     $("#extra-background").attr("class", "extra-background page5");
-    $("#page4-4").fadeOut(500);
+    $("#page4-5").fadeOut(500);
     $("#page5-1").fadeIn(500);
     $("#page5-1").removeClass("hide");
-    $("#question4-4").attr("class", "question");
+    $("#question4-5").attr("class", "question");
     $("#question5-1").attr("class", "question");
     pageFlag = 5;
     $("#1").animate({ left: "0px" });
@@ -838,11 +874,11 @@ $(document).ready(function () {
 
   // -------------page5----------------
   // ·············Q5-1·················
-  // back to page4-4
+  // back to page4-5
   $("#backBtnInPage5").click(function () {
     $("#extra-background").attr("class", "extra-background page4");
-    $("#question4-4").attr("class", "question");
-    $("#page4-4").fadeIn(500);
+    $("#question4-5").attr("class", "question");
+    $("#page4-5").fadeIn(500);
     $("#page5-1").fadeOut(500);
     $("#question5-1").attr("class", "question");
     pageFlag = 4;
