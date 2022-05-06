@@ -482,6 +482,21 @@ textarea {
   letter-spacing: 3px;
 }
 
+/* Q 4-5 */
+#label4-5-1 {
+  background-image: url(../images/options_icon/4-5-1.png);
+  letter-spacing: 13px;
+}
+
+#label4-5-2 {
+  background-image: url(../images/options_icon/4-5-2.png);
+  letter-spacing: 13px;
+}
+#label4-5-3 {
+  background-image: url(../images/options_icon/4-5-3.png);
+  letter-spacing: 13px;
+}
+
 /* result page */
 /* #result.containerQ {
   max-width: 896px;

@@ -28,10 +28,7 @@ class Q1_2 extends Component {
         </div>
         <div className='containerB' id='bottomBtn1-2'>
           <div className='bottomBtnContainer'>
-            <button
-              className='btn--large continue'
-              id='continueBtnInPage1'
-              onClick={this.props.isWrap}>
+            <button className='btn--large continue' id='continueBtnInPage1'>
               继续
             </button>
             <button className='btn--small prev' id='prev1-2' />

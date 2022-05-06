@@ -74,7 +74,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-6'
               name='multi group4-3'
-              value='determined'
+              value='steadfast'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -86,7 +86,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-7'
               name='multi group4-3'
-              value='alarmed'
+              value='alert'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -141,24 +141,24 @@ class Q4_3 extends Component {
           </div>
           <div id='opt4-3-12' className='multiTag group4-3'>
             <label id='label4-3-12' htmlFor='4-3-12'>
-              无<span className='lastLetterNoSpacing'>聊</span>
+              叹<span className='lastLetterNoSpacing'>息</span>
             </label>
             <input
               id='4-3-12'
               name='multi group4-3'
-              value='boring'
+              value='sigh'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-3-13' className='multiTag group4-3'>
             <label id='label4-3-13' htmlFor='4-3-13'>
-              心<span className='lastLetterNoSpacing'>酸</span>
+              无<span className='lastLetterNoSpacing'>聊</span>
             </label>
             <input
               id='4-3-13'
               name='multi group4-3'
-              value='heart-tugging'
+              value='bored'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -182,7 +182,7 @@ class Q4_3 extends Component {
             <input
               id='4-3-15'
               name='multi group4-3'
-              value='focused'
+              value='focus'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -191,7 +191,11 @@ class Q4_3 extends Component {
         <div className='containerB' id='bottomBtn4-3'>
           <div className='bottomBtnContainer'>
             <button className='btn--small prev' id='prev4-3' />
-            <button className='btn--small next' id='next4-3' />
+            <button
+              className='btn--small next'
+              id='next4-3'
+              onClick={this.props.sendEmo}
+            />
           </div>
         </div>
       </div>

@@ -30,6 +30,8 @@ class App extends React.Component {
       time: [],
       fantasy: false,
       emotions: [],
+      supplement: "",
+      resultTxt: "",
     },
     isForget: {
       "3-4": false,
@@ -48,8 +50,9 @@ class App extends React.Component {
     }));
   };
 
-  isChinesePunc = () => {
-    let text = [...this.state.dream.description];
+  isChinesePunc = (x) => {
+    let text = [...this.state.dream.resultTxt];
+    console.log("get: ", text);
     let output = "";
     let regCut =
       /[\u0020|\u0021|\u002c|\u002e|\u003b|\u003f|\u00a0|\u202f|\u2420|\u3002|\uff01|\uff0c|\uff1b|\uff1f]/;
@@ -65,6 +68,7 @@ class App extends React.Component {
     }
     let dream = { ...this.state.dream };
     dream.description_ch = output;
+    console.log("output: ", output);
     this.setState({ dream });
   };
 
@@ -142,8 +146,21 @@ class App extends React.Component {
 
   handleForget = (e) => {
     let dream = { ...this.state.dream };
+    let isForget = { ...this.state.isForget };
 
-    if (this.state.isForget["3-4"] || this.state.dream.weather.length === 0) {
+    if (dream.weather.length === 0) {
+      isForget["3-4"] = true;
+    } else {
+      isForget["3-4"] = false;
+    }
+    if (dream.time.length === 0) {
+      isForget["3-5"] = true;
+    } else {
+      isForget["3-5"] = false;
+    }
+    this.setState({ isForget });
+
+    if (this.state.isForget["3-4"]) {
       switch (this.state.dream.type) {
         case "nightmare":
           dream.weather = ["thunder"];
@@ -164,14 +181,14 @@ class App extends React.Component {
           break;
       }
     }
-    if (this.state.isForget["3-5"] || this.state.dream.time.length === 0) {
+    if (this.state.isForget["3-5"] || dream.time.length == 0) {
       dream.time = ["daytime"];
     }
 
     this.setState({ dream });
   };
 
-  sendData = async () => {
+  sendData = async (x) => {
     const info = { ...this.state.dream };
     console.log("sent: ", info);
     const { data: post } = await axios.post(
@@ -181,7 +198,35 @@ class App extends React.Component {
     console.log("My dream: ", post);
   };
 
-  test = () => {
+  joinDes = (x) => {
+    let dream = { ...this.state.dream };
+    let resultDes = dream.description + "；" + dream.supplement;
+    console.log("joined: ", resultDes);
+    dream.resultTxt = resultDes;
+    console.log("result: ", dream.resultTxt);
+    this.setState({ dream });
+  };
+
+  sendEmo = async (x) => {
+    let dream = { ...this.state.dream };
+    let audio = this.state.audio;
+    console.log("emotions collected: ", dream);
+    const { data: post } = await axios.post(
+      "http://127.0.0.1:5000/music",
+      dream
+    );
+    this.setState({ audio: post });
+    console.log("track: ", post);
+  };
+
+  getMusic = async (x) => {
+    let audio = this.state.audio;
+    audio = await (await axios.get("http://127.0.0.1:5000/music")).data;
+    this.setState({ audio });
+    console.log("src: ", this.state.audio);
+  };
+
+  test = (x) => {
     console.log(this.state);
   };
 
@@ -215,8 +260,8 @@ class App extends React.Component {
           </div>
         </div>
 
-        <HomePage></HomePage>
-        <Page1 handleInput={this.handleInput} isWrap={this.isChinesePunc} />
+        {/* <HomePage></HomePage>
+        <Page1 handleInput={this.handleInput} />
         <Page2
           singleOptClick={this.handleSingleOptClick}
           optClick={this.handleBoolOptClick2}
@@ -227,17 +272,27 @@ class App extends React.Component {
           multiOptClick3_5={this.handleMultiOptClick3_5}
           forgetClick={this.handleForgetClick}
           optClick={this.handleBoolOptClick3}
-        />
-        <Page4 chooseEmo={this.handleMultiTagClick} />
-        <Q5_1
           handleForget={this.handleForget}
           test={this.test}
           sendData={this.sendData}
+        /> */}
+        <Page4
+          chooseEmo={this.handleMultiTagClick}
+          getMusic={this.getMusic}
+          sendEmo={this.sendEmo}
+        />
+        <Q5_1
+          handleInput={this.handleInput}
+          isWrap={this.isChinesePunc}
+          join={this.joinDes}
+          getMusic={this.getMusic}
         />
         <ResultPage
           title={this.state.dream.dreamTitle}
           content={this.state.dream.description_ch}
           music={this.state.audio}
+          // getMusic={this.getMusic}
+          sendEmo={this.sendEmo}
         />
       </React.Fragment>
     );

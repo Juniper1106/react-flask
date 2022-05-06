@@ -69,84 +69,84 @@ class Q4_2 extends Component {
           </div>
           <div id='opt4-2-6' className='multiTag group4-2'>
             <label id='label4-2-6' htmlFor='4-2-6'>
-              悔<span className='lastLetterNoSpacing'>恨</span>
+              孤<span className='lastLetterNoSpacing'>独</span>
             </label>
             <input
               id='4-2-6'
               name='group4-2'
-              value='remorse'
+              value='lonely'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-7' className='multiTag group4-2'>
             <label id='label4-2-7' htmlFor='4-2-7'>
-              嫉<span className='lastLetterNoSpacing'>妒</span>
+              悔<span className='lastLetterNoSpacing'>恨</span>
             </label>
             <input
               id='4-2-7'
               name='group4-2'
-              value='jealous'
+              value='remorse'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-8' className='multiTag group4-2'>
             <label id='label4-2-8' htmlFor='4-2-8'>
-              焦<span className='lastLetterNoSpacing'>虑</span>
+              嫉<span className='lastLetterNoSpacing'>妒</span>
             </label>
             <input
               id='4-2-8'
               name='group4-2'
-              value='anxious'
+              value='jealous'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-9' className='multiTag group4-2'>
             <label id='label4-2-9' htmlFor='4-2-9'>
-              恐<span className='lastLetterNoSpacing'>惧</span>
+              焦<span className='lastLetterNoSpacing'>虑</span>
             </label>
             <input
               id='4-2-9'
               name='group4-2'
-              value='scared'
+              value='anxious'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-10' className='multiTag group4-2'>
             <label id='label4-2-10' htmlFor='4-2-10'>
-              伤<span className='lastLetterNoSpacing'>感</span>
+              恐<span className='lastLetterNoSpacing'>惧</span>
             </label>
             <input
               id='4-2-10'
               name='group4-2'
-              value='sentimental'
+              value='scared'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-11' className='multiTag group4-2'>
             <label id='label4-2-11' htmlFor='4-2-11'>
-              生<span className='lastLetterNoSpacing'>气</span>
+              伤<span className='lastLetterNoSpacing'>感</span>
             </label>
             <input
               id='4-2-11'
               name='group4-2'
-              value='angry'
+              value='sentimental'
               type='checkbox'
               onClick={this.props.optClick}
             />
           </div>
           <div id='opt4-2-12' className='multiTag group4-2'>
             <label id='label4-2-12' htmlFor='4-2-12'>
-              失<span className='lastLetterNoSpacing'>落</span>
+              生<span className='lastLetterNoSpacing'>气</span>
             </label>
             <input
               id='4-2-12'
               name='group4-2'
-              value='bereft'
+              value='angry'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -158,7 +158,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-13'
               name='group4-2'
-              value='discouragement'
+              value='discouraged'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -182,7 +182,7 @@ class Q4_2 extends Component {
             <input
               id='4-2-15'
               name='group4-2'
-              value='disgusting'
+              value='disgusted'
               type='checkbox'
               onClick={this.props.optClick}
             />

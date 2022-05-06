@@ -26,7 +26,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-2'
               name='group4-1'
-              value='protectiveness'
+              value='protective'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -134,7 +134,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-11'
               name='group4-1'
-              value='leisured'
+              value='leisurely'
               type='checkbox'
               onClick={this.props.optClick}
             />
@@ -182,7 +182,7 @@ class Q4_1 extends Component {
             <input
               id='4-1-15'
               name='group4-1'
-              value='friendliness'
+              value='friendly'
               type='checkbox'
               onClick={this.props.optClick}
             />

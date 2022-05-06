@@ -859,7 +859,7 @@ $(document).ready(function () {
       $("#result").fadeIn(500);
       $("#result").removeClass("hide");
       $("#question5-1").attr("class", "question");
-      $("#resultPage").attr("class", "optQuestion grid-result");
+      $("#resultPage").attr("class", "resultArea grid-result");
       $("#1").animate({ left: "0px" });
       $("#2").animate({ left: "34px" });
       $("#3").animate({ left: "68px" });

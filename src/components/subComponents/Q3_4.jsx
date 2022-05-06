@@ -77,7 +77,11 @@ class Q3_4 extends Component {
         <div className='containerB' id='bottomBtn3-4'>
           <div className='bottomBtnContainer'>
             <button className='btn--small prev' id='prev3-4' />
-            <button className='btn--small next' id='next3-4' />
+            <button
+              className='btn--small next'
+              id='next3-4'
+              onClick={this.props.handleForget}
+            />
           </div>
         </div>
       </div>

@@ -14,15 +14,17 @@ class Q5_1 extends Component {
               cols={65}
               rows={4}
               placeholder='我还想起来...'
-              defaultValue={""}
+              autoComplete='off'
+              name='supplement'
+              onChange={this.props.handleInput}
             />
           </div>
           <button
             className='skipBtn'
             id='5-1'
-            onMouseEnter={this.props.handleForget}
-            onClick={this.props.sendData}
-            onMouseLeave={this.props.test}>
+            onMouseEnter={this.props.join}
+            onMouseLeave={this.props.test}
+            onClick={this.props.isWrap}>
             跳<span className='lastLetterNoSpacing'>过</span>
           </button>
         </div>
@@ -31,8 +33,8 @@ class Q5_1 extends Component {
             <button
               className='btn--small next'
               id='next5-1'
-              onMouseEnter={this.props.handleForget}
-              onClick={this.props.sendData}
+              onMouseEnter={this.props.join}
+              onClick={this.props.isWrap}
             />
             <button className='btn--large back' id='backBtnInPage5'>
               返回

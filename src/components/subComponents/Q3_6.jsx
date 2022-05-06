@@ -36,7 +36,10 @@ class Q3_6 extends Component {
         </div>
         <div className='containerB' id='bottomBtn3-6'>
           <div className='bottomBtnContainer'>
-            <button className='btn--large continue' id='continueBtnInPage3'>
+            <button
+              className='btn--large continue'
+              id='continueBtnInPage3'
+              onClick={(b, c) => (this.props.test(b), this.props.sendData(c))}>
               继续
             </button>
             <button className='btn--small prev' id='prev3-6' />
