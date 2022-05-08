@@ -246,15 +246,30 @@ class App extends React.Component {
         </div>
 
         {/* extra background*/}
-        <div className='extra-background' id='extra-background' />
+        <div className='extra-background page3' id='extra-background' />
+        <div className='lightning flashit1 hide' id='lightning'></div>
+        <div class='fogwrapper'>
+          <div id='foglayer_01' class='fog'>
+            <div className='image01'></div>
+            {/* <div className='image02'></div> */}
+          </div>
+          <div id='foglayer_02' className='fog'>
+            <div className='image01'></div>
+            {/* <div className='image02'></div> */}
+          </div>
+          <div id='foglayer_03' className='fog'>
+            <div className='image01'></div>
+            {/* <div className='image02'></div> */}
+          </div>
+        </div>
 
         {/* video */}
-        <video
+        {/* <video
           id='backVideo'
           loop={true}
           autoPlay={true}
           src='/videos/cloudsea.mp4'
-        />
+        /> */}
 
         {/* page indicator */}
         <div className='containerI hide' id='indicatorContainer'>
@@ -267,12 +282,13 @@ class App extends React.Component {
           </div>
         </div>
 
-        <HomePage></HomePage>
+        <div id='snow' className='snowContainer'></div>
+        {/* <HomePage></HomePage>
         <Page1 handleInput={this.handleInput} />
         <Page2
           singleOptClick={this.handleSingleOptClick}
           optClick={this.handleBoolOptClick2}
-        />
+        /> */}
         <Page3
           handleInput={this.handleInput}
           multiOptClick3_4={this.handleMultiOptClick3_4}
