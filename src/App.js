@@ -30,6 +30,7 @@ class App extends React.Component {
       time: [],
       fantasy: false,
       emotions: [],
+      gender: "unset",
       supplement: "",
       resultTxt: "",
     },
@@ -144,6 +145,12 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
+  handleGender = (e) => {
+    let dream = { ...this.state.dream };
+    dream.gender = e.target.value;
+    this.setState({ dream });
+  };
+
   handleForget = (e) => {
     let dream = { ...this.state.dream };
     let isForget = { ...this.state.isForget };
@@ -209,7 +216,7 @@ class App extends React.Component {
 
   sendEmo = async (x) => {
     let dream = { ...this.state.dream };
-    let audio = this.state.audio;
+    // let audio = this.state.audio;
     console.log("emotions collected: ", dream);
     const { data: post } = await axios.post(
       "http://127.0.0.1:5000/music",
@@ -260,7 +267,7 @@ class App extends React.Component {
           </div>
         </div>
 
-        {/* <HomePage></HomePage>
+        <HomePage></HomePage>
         <Page1 handleInput={this.handleInput} />
         <Page2
           singleOptClick={this.handleSingleOptClick}
@@ -275,11 +282,13 @@ class App extends React.Component {
           handleForget={this.handleForget}
           test={this.test}
           sendData={this.sendData}
-        /> */}
+        />
         <Page4
           chooseEmo={this.handleMultiTagClick}
           getMusic={this.getMusic}
           sendEmo={this.sendEmo}
+          handleGender={this.handleGender}
+          test={this.test}
         />
         <Q5_1
           handleInput={this.handleInput}

@@ -12,13 +12,13 @@ class Q1_1 extends Component {
               className='dreamTitle'
               type='text'
               placeholder='我的梦境'
-              maxLength={20}
+              maxLength={15}
               autoComplete='off'
               name='title'
               onChange={this.props.handleInput}
             />
             <label htmlFor='dreamTitle' id='titleCount' className='titleCount'>
-              0/20
+              0/15
             </label>
             <div className='line' />
           </div>

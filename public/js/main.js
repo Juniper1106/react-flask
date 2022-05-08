@@ -17,10 +17,11 @@ $(document).ready(function () {
   // ---------------global function----------------
   // ···············count text··············
   function txtCount(txt) {
-    var val = txt.value;
+    let val = txt.value;
     var len = val.length;
     return len;
   }
+
   // ···············detect input················
   $("#character, #relation, #action, #scene").bind(
     "input propertychange",
@@ -28,9 +29,13 @@ $(document).ready(function () {
       $("#prompt3-1, #prompt3-2, #prompt3-3").attr("class", "promptTag hide");
     }
   );
+
   // ···············radio button···············
   $(":radio").click(function () {
-    $("#prompt2-1, #prompt2-4, #prompt3-6").attr("class", "promptTag hide");
+    $("#prompt2-1, #prompt2-4, #prompt3-6, #prompt4-4").attr(
+      "class",
+      "promptTag hide"
+    );
     var r = $(this).attr("name");
     var id = $(this).attr("id");
     $(":radio[name=" + r + "]:not(:checked)").attr("tag", 0);
@@ -44,6 +49,7 @@ $(document).ready(function () {
       $("#opt" + id).css("opacity", "0.8");
     }
   });
+
   // ················forget button················
   $(".forgetBtn").click(function () {
     var id = $(this).attr("id");
@@ -57,6 +63,7 @@ $(document).ready(function () {
       .find(".group" + id)
       .css("opacity", "0.3");
   });
+
   // ················checkbox·················
   $(":checkbox").click(function () {
     var id = $(this).attr("id");
@@ -66,6 +73,7 @@ $(document).ready(function () {
       $("#opt" + id).css("opacity", "0.8");
     }
   });
+
   // ···············logo·················
   $("#logo").click(function () {
     if (pageFlag == 0) {
@@ -120,7 +128,7 @@ $(document).ready(function () {
     var label = document.getElementById("titleCount");
     $("#titleCount").css("color", "rgba(255, 255, 255, 0.3)");
     label.innerHTML =
-      document.getElementById("dreamTitle").value.length + "/20";
+      document.getElementById("dreamTitle").value.length + "/15";
   });
   // back to home page
   $("#backBtnInPage1").click(function () {
@@ -808,20 +816,31 @@ $(document).ready(function () {
   });
   // to page4-5
   $("#next4-4").click(function () {
-    $("#question4-4").attr(
-      "class",
-      "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
-    );
-    $("#question4-4").animate({ opacity: "0" }, "500ms");
-    $("#bottomBtn4-4").fadeOut(500);
+    var flag = 0;
+    for (let index = 1; index <= 5; index++) {
+      var state = $("#4-4-" + index).prop("checked");
+      if (state == true) {
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      $("#prompt4-4").removeClass("hide");
+    } else {
+      $("#question4-4").attr(
+        "class",
+        "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
+      );
+      $("#question4-4").animate({ opacity: "0" }, "500ms");
+      $("#bottomBtn4-4").fadeOut(500);
 
-    $("#page4-5").removeClass("hide");
-    $("#question4-5").attr(
-      "class",
-      "question animate__animated animate__slideInRight"
-    );
-    $("#question4-5").animate({ opacity: "1" }, "500ms");
-    $("#bottomBtn4-5").fadeIn(500);
+      $("#page4-5").removeClass("hide");
+      $("#question4-5").attr(
+        "class",
+        "question animate__animated animate__slideInRight"
+      );
+      $("#question4-5").animate({ opacity: "1" }, "500ms");
+      $("#bottomBtn4-5").fadeIn(500);
+    }
   });
 
   // ·············Q4-5·················

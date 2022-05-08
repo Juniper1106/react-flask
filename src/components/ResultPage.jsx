@@ -8,6 +8,7 @@ class ResultPage extends Component {
 
   changeImg = () => {
     document.getElementById("genImg").src = "http://127.0.0.1:5000/img";
+    console.log("get img");
   };
 
   restoreMusic() {
@@ -49,6 +50,7 @@ class ResultPage extends Component {
             width={"290px"}
             height={"120px"}
             src={this.props.music}
+            // src='https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/38605650&amp;color=ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_artwork=false'
             frameBorder='no'></iframe>
           <div className='containerB--result' id='bottomBtnResult'>
             <div className='bottomBtnContainer'>
