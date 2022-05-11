@@ -1,7 +1,6 @@
 body {
-  height: 100vh;
   overflow: hidden;
-  color: white;
+  /* color: white; */
 }
 
 .snowflake {
@@ -9,11 +8,11 @@ body {
   width: 10px;
   height: 10px;
   background: linear-gradient(
-    white,
-    white
+    rgb(233, 233, 233),
+    rgb(161, 161, 161)
   ); /* Workaround for Chromium's selective color inversion */
   border-radius: 50%;
-  filter: drop-shadow(0 0 10px white);
+  filter: drop-shadow(0 0 10px rgb(227, 227, 227));
 }
 
 .snowContainer {

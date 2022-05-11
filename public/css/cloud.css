@@ -1,0 +1,260 @@
+/* ---------- Cloud ---------- */
+.cloudwrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  filter: grayscale(0.6) saturate(1.2) sepia(0.2);
+}
+
+#cloudlayer_01,
+#cloudlayer_02,
+#cloudlayer_03 {
+  /* height: 35%; */
+  height: 300px;
+  position: absolute;
+  width: 450px;
+  opacity: 0.8;
+  top: -100px;
+}
+
+#cloudlayer_01 .cloudimage01,
+#cloudlayer_01 .cloudimage02,
+#cloudlayer_02 .cloudimage01,
+#cloudlayer_02 .cloudimage02,
+#cloudlayer_03 .cloudimage01,
+#cloudlayer_03 .cloudimage02 {
+  float: left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#cloudlayer_01 .cloudimage01,
+#cloudlayer_01 .cloudimage02,
+#cloudlayer_02 .cloudimage01 {
+  height: 100%;
+  width: 120%;
+}
+
+#cloudlayer_01 .cloudimage01 {
+  animation: cloudlayer_moveme_left1 50s linear infinite;
+}
+
+#cloudlayer_01 .cloudimage02 {
+  animation: cloudlayer_moveme_right1 60s ease-in-out infinite;
+}
+
+#cloudlayer_02 .cloudimage01 {
+  animation: cloudlayer_moveme_left3 67s linear infinite;
+}
+
+#cloudlayer_02 .cloudimage02 {
+  animation: cloudlayer_moveme_right3 46s linear infinite;
+}
+
+#cloudlayer_03 .cloudimage01 {
+  animation: cloudlayer_moveme_left2 37s linear infinite;
+}
+
+#cloudlayer_03 .cloudimage02 {
+  animation: cloudlayer_moveme_right2 58s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+      'size: cover' || 'size: 100%'; results remain the same
+      'attachment: scroll' can be added or removed; results remain the same
+      'attachment: fixed' causing unexpected results in Chrome
+      'repeat-x' || 'no-repeat'; results remain the same
+    */
+#cloudlayer_01 .cloudimage01 {
+  background-image: url("../images/weather_icon/cloud4.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+}
+
+#cloudlayer_01 .cloudimage02,
+#cloudlayer_02 .cloudimage01 {
+  background-image: url("../images/weather_icon/cloud3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+}
+
+#cloudlayer_02 .cloudimage02,
+#cloudlayer_03 .cloudimage01 {
+  background: url("../images/weather_icon/cloud2.png") center center/cover
+    no-repeat transparent;
+}
+
+#cloudlayer_03 .cloudimage02 {
+  background: url("../images/weather_icon/cloud1.png") center center/cover
+    no-repeat transparent;
+}
+
+/* ---------- Keyframe moveMe ---------- */
+@keyframes cloudlayer_moveme_left1 {
+  0% {
+    left: -10%;
+  }
+  16% {
+    left: 1%;
+  }
+  29% {
+    left: -6%;
+  }
+  45% {
+    left: 10%;
+  }
+  57% {
+    left: 2%;
+  }
+  79% {
+    left: -19%;
+  }
+  91% {
+    left: -1%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+@keyframes cloudlayer_moveme_left2 {
+  0% {
+    left: 0%;
+  }
+  18% {
+    left: 21%;
+  }
+  37% {
+    left: 34%;
+  }
+  47% {
+    left: 80%;
+  }
+  65% {
+    left: 42%;
+  }
+  83% {
+    left: 61%;
+  }
+  94% {
+    left: 9%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes cloudlayer_moveme_left3 {
+  0% {
+    left: 80%;
+  }
+  21% {
+    left: 91%;
+  }
+  31% {
+    left: 84%;
+  }
+  57% {
+    left: 100%;
+  }
+  65% {
+    left: 92%;
+  }
+  75% {
+    left: 71%;
+  }
+  87% {
+    left: 89%;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes cloudlayer_moveme_right1 {
+  0% {
+    left: 231%;
+  }
+  16% {
+    left: 220%;
+  }
+  29% {
+    left: 240%;
+  }
+  45% {
+    left: 224%;
+  }
+  57% {
+    left: 211%;
+  }
+  79% {
+    left: 232%;
+  }
+  91% {
+    left: 220%;
+  }
+  100% {
+    left: 229%;
+  }
+}
+
+@keyframes cloudlayer_moveme_right2 {
+  0% {
+    left: 171%;
+  }
+  16% {
+    left: 200%;
+  }
+  29% {
+    left: 180%;
+  }
+  45% {
+    left: 204%;
+  }
+  57% {
+    left: 151%;
+  }
+  79% {
+    left: 212%;
+  }
+  91% {
+    left: 120%;
+  }
+  100% {
+    left: 169%;
+  }
+}
+
+@keyframes cloudlayer_moveme_right3 {
+  0% {
+    left: 161%;
+  }
+  16% {
+    left: 150%;
+  }
+  29% {
+    left: 170%;
+  }
+  45% {
+    left: 154%;
+  }
+  57% {
+    left: 141%;
+  }
+  79% {
+    left: 162%;
+  }
+  91% {
+    left: 150%;
+  }
+  100% {
+    left: 159%;
+  }
+}

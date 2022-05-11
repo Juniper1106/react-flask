@@ -32,21 +32,30 @@ $(document).ready(function () {
 
   // ···············radio button···············
   $(":radio").click(function () {
-    $("#prompt2-1, #prompt2-4, #prompt3-6, #prompt4-4").attr(
-      "class",
-      "promptTag hide"
-    );
     var r = $(this).attr("name");
     var id = $(this).attr("id");
-    $(":radio[name=" + r + "]:not(:checked)").attr("tag", 0);
-    if ($(this).attr("tag") == 1) {
-      $(this).prop("checked", false);
-      $(this).attr("tag", 0);
-      $("#opt" + id).css("opacity", "0.3");
-    } else {
-      $(this).attr("tag", 1);
-      $("." + r).css("opacity", "0.3");
-      $("#opt" + id).css("opacity", "0.8");
+
+    console.log(id);
+    if (
+      id != "2-3-1-1" &&
+      id != "2-3-1-2" &&
+      id != "2-3-2-1" &&
+      id != "2-3-2-2"
+    ) {
+      $("#prompt2-1, #prompt2-4, #prompt3-6, #prompt4-4").attr(
+        "class",
+        "promptTag hide"
+      );
+      $(":radio[name=" + r + "]:not(:checked)").attr("tag", 0);
+      if ($(this).attr("tag") == 1) {
+        $(this).prop("checked", false);
+        $(this).attr("tag", 0);
+        $("#opt" + id).css("opacity", "0.3");
+      } else {
+        $(this).attr("tag", 1);
+        $("." + r).css("opacity", "0.3");
+        $("#opt" + id).css("opacity", "0.8");
+      }
     }
   });
 
@@ -312,7 +321,7 @@ $(document).ready(function () {
     $("#page2-3").removeClass("hide");
     $("#question2-3").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideInRight"
+      "optQuestion grid-2x3 animate__animated animate__slideInRight"
     );
     $("#question2-3").animate({ opacity: "1" }, "500ms");
 
@@ -375,47 +384,47 @@ $(document).ready(function () {
 
   // ·············Q2-4·················
   // back to page2-3
-  $("#prev2-4").click(function () {
-    $("#question2-3").attr(
-      "class",
-      "question animate__animated animate__slideInLeft"
-    );
-    $("#question2-3").animate({ opacity: "1" }, "500ms");
-    $("#bottomBtn2-3").fadeIn(500);
+  // $("#prev2-4").click(function () {
+  //   $("#question2-3").attr(
+  //     "class",
+  //     "question animate__animated animate__slideInLeft"
+  //   );
+  //   $("#question2-3").animate({ opacity: "1" }, "500ms");
+  //   $("#bottomBtn2-3").fadeIn(500);
 
-    $("#question2-4").attr(
-      "class",
-      "optQuestion grid-2x2 animate__animated animate__slideOutRight"
-    );
-    $("#question2-4").animate({ opacity: "0" }, "500ms");
-    $("#bottomBtn2-4").fadeOut(500);
-  });
-  // to page 3-1
-  $("#continueBtnInPage2").click(function () {
-    var flag = 0;
-    for (let index = 1; index <= 2; index++) {
-      var state = $("#2-4-" + index).prop("checked");
-      if (state == true) {
-        flag = 1;
-      }
-    }
-    if (flag == 0) {
-      $("#prompt2-4").removeClass("hide");
-    } else {
-      $("#extra-background").attr("class", "extra-background page3");
-      $("#page3-1").fadeIn(500);
-      $("#page2-4").fadeOut(500);
-      $("#page3-1").removeClass("hide");
-      $("#question2-4").attr("class", "optQuestion grid-2x2");
-      $("#question3-1").attr("class", "question");
-      pageFlag = 3;
-      $("#1").animate({ left: "0px" });
-      $("#2").animate({ left: "34px" });
-      $("#indicator").animate({ left: "68px" });
-      $("#3").animate({ left: "102px" });
-      $("#4").animate({ left: "136px" });
-    }
-  });
+  //   $("#question2-4").attr(
+  //     "class",
+  //     "optQuestion grid-2x2 animate__animated animate__slideOutRight"
+  //   );
+  //   $("#question2-4").animate({ opacity: "0" }, "500ms");
+  //   $("#bottomBtn2-4").fadeOut(500);
+  // });
+  // // to page 3-1
+  // $("#continueBtnInPage2").click(function () {
+  //   var flag = 0;
+  //   for (let index = 1; index <= 2; index++) {
+  //     var state = $("#2-4-" + index).prop("checked");
+  //     if (state == true) {
+  //       flag = 1;
+  //     }
+  //   }
+  //   if (flag == 0) {
+  //     $("#prompt2-4").removeClass("hide");
+  //   } else {
+  //     $("#extra-background").attr("class", "extra-background page3");
+  //     $("#page3-1").fadeIn(500);
+  //     $("#page2-4").fadeOut(500);
+  //     $("#page3-1").removeClass("hide");
+  //     $("#question2-4").attr("class", "optQuestion grid-2x2");
+  //     $("#question3-1").attr("class", "question");
+  //     pageFlag = 3;
+  //     $("#1").animate({ left: "0px" });
+  //     $("#2").animate({ left: "34px" });
+  //     $("#indicator").animate({ left: "68px" });
+  //     $("#3").animate({ left: "102px" });
+  //     $("#4").animate({ left: "136px" });
+  //   }
+  // });
 
   // -------------page3----------------
   // ·············Q3-1·················
@@ -528,12 +537,22 @@ $(document).ready(function () {
       $("#page3-4").removeClass("hide");
       $("#question3-4").attr(
         "class",
-        "optQuestion grid-2x5 animate__animated animate__slideInRight"
+        "optQuestion grid-4x2 animate__animated animate__slideInRight"
       );
       $("#question3-4").animate({ opacity: "1" }, "500ms");
 
       $("#bottomBtn3-3").css("display", "none");
       $("#bottomBtn3-4").css("display", "block");
+
+      if (document.getElementById("3-4-2") != "0") {
+        $("#cloud").attr("class", "cloudwrapper");
+      }
+      if (document.getElementById("3-4-3").value != "0") {
+        $("#lightning").attr("class", "lightning flashit3");
+      }
+      if (document.getElementById("3-4-4").value != "0") {
+        $("#fog").attr("class", "fogwrapper");
+      }
     } else {
       $("#prompt3-3").removeClass("hide");
     }
@@ -550,18 +569,22 @@ $(document).ready(function () {
 
     $("#question3-4").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideOutRight"
+      "optQuestion grid-4x2 animate__animated animate__slideOutRight"
     );
     $("#question3-4").animate({ opacity: "0" }, "500ms");
 
     $("#bottomBtn3-4").css("display", "none");
     $("#bottomBtn3-3").css("display", "block");
+
+    $("#lightning").attr("class", "lightning hide");
+    $("#cloud").attr("class", "cloudwrapper hide");
+    $("#fog").attr("class", "fogwrapper hide");
   });
   // forget button
   $("#3-4").click(function () {
     $("#question3-4").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
+      "optQuestion grid-4x2 animate__animated animate__slideOutLeft"
     );
     $("#question3-4").animate({ opacity: "0" }, "500ms");
 
@@ -574,12 +597,16 @@ $(document).ready(function () {
 
     $("#bottomBtn3-4").css("display", "none");
     $("#bottomBtn3-5").css("display", "block");
+
+    $("#lightning").attr("class", "lightning hide");
+    $("#cloud").attr("class", "cloudwrapper hide");
+    $("#fog").attr("class", "fogwrapper hide");
   });
   // to page3-5
   $("#next3-4").click(function () {
     $("#question3-4").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
+      "optQuestion grid-4x2 animate__animated animate__slideOutLeft"
     );
     $("#question3-4").animate({ opacity: "0" }, "500ms");
 
@@ -592,6 +619,10 @@ $(document).ready(function () {
 
     $("#bottomBtn3-4").css("display", "none");
     $("#bottomBtn3-5").css("display", "block");
+
+    $("#lightning").attr("class", "lightning hide");
+    $("#cloud").attr("class", "cloudwrapper hide");
+    $("#fog").attr("class", "fogwrapper hide");
   });
 
   // ·············Q3-5·················
@@ -599,7 +630,7 @@ $(document).ready(function () {
   $("#prev3-5").click(function () {
     $("#question3-4").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideInLeft"
+      "optQuestion grid-4x2 animate__animated animate__slideInLeft"
     );
     $("#question3-4").animate({ opacity: "1" }, "500ms");
 
@@ -611,6 +642,16 @@ $(document).ready(function () {
 
     $("#bottomBtn3-5").css("display", "none");
     $("#bottomBtn3-4").css("display", "block");
+
+    if (document.getElementById("3-4-2") != "0") {
+      $("#cloud").attr("class", "cloudwrapper");
+    }
+    if (document.getElementById("3-4-3").value != "0") {
+      $("#lightning").attr("class", "lightning flashit3");
+    }
+    if (document.getElementById("3-4-4").value != "0") {
+      $("#fog").attr("class", "fogwrapper");
+    }
   });
   // forget button
   $("#3-5").click(function () {

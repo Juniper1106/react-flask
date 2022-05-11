@@ -26,7 +26,7 @@ class App extends React.Component {
       relation: "",
       action: "",
       scene: "",
-      weather: [],
+      weather: [3, 0, 4, 3, 0, 0],
       time: [],
       fantasy: false,
       emotions: [],
@@ -101,16 +101,26 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
-  handleMultiOptClick3_4 = (e) => {
+  map = (inNum, in_min, in_max, out_min, out_max) => {
+    return (
+      ((inNum - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+    );
+  };
+
+  handleWeatherSlider = () => {
     let dream = { ...this.state.dream };
-
-    if (e.target.checked && !dream.weather.includes(e.target.value)) {
-      dream.weather.push(e.target.value);
-    } else if (!e.target.checked && dream.weather.includes(e.target.value)) {
-      let i = dream.weather.indexOf(e.target.value);
-      dream.weather.splice(i, 1);
+    for (let index = 0; index < 6; index++) {
+      let id = "3-4-" + (index + 1);
+      dream.weather[index] = Math.round(
+        this.map(
+          parseInt(document.getElementById(id).value),
+          parseInt(document.getElementById(id).min),
+          parseInt(document.getElementById(id).max),
+          0,
+          5
+        )
+      );
     }
-
     this.setState({ dream });
   };
 
@@ -170,19 +180,19 @@ class App extends React.Component {
     if (this.state.isForget["3-4"]) {
       switch (this.state.dream.type) {
         case "nightmare":
-          dream.weather = ["thunder"];
+          dream.weather = [0, 0, 5, 0, 0, 0];
           break;
         case "badDream":
-          dream.weather = ["rainy"];
+          dream.weather = [5, 0, 0, 0, 0, 0];
           break;
         case "neutralDream":
-          dream.weather = ["cloudy"];
+          dream.weather = [0, 5, 0, 0, 0, 0];
           break;
         case "goodDream":
-          dream.weather = ["sunny"];
+          dream.weather = [0, 0, 0, 0, 0, 5];
           break;
         case "sweetDream":
-          dream.weather = ["sunny"];
+          dream.weather = [0, 0, 0, 0, 0, 5];
           break;
         default:
           break;
@@ -246,30 +256,63 @@ class App extends React.Component {
         </div>
 
         {/* extra background*/}
-        <div className='extra-background page3' id='extra-background' />
-        <div className='lightning flashit1 hide' id='lightning'></div>
-        <div class='fogwrapper'>
-          <div id='foglayer_01' class='fog'>
+        <div className='extra-background' id='extra-background' />
+
+        {/* lightning */}
+        <div className='lightning hide' id='lightning'></div>
+
+        {/* snow */}
+        <div
+          id='snow'
+          className='snowContainer'
+          style={{ display: "none" }}></div>
+
+        {/* rain */}
+        <body className='back-row-toggle splat-toggle hide' id='rain'>
+          <div className='rain front-row'></div>
+          <div className='rain back-row'></div>
+        </body>
+
+        {/* cloud */}
+        <div className='cloudwrapper hide' id='cloud'>
+          <div id='cloudlayer_01' className='cloud hide'>
+            <div className='cloudimage01'></div>
+            <div className='cloudimage02'></div>
+          </div>
+          <div id='cloudlayer_02' className='cloud hide'>
+            <div className='cloudimage01'></div>
+            <div className='cloudimage02'></div>
+          </div>
+          <div id='cloudlayer_03' className='cloud hide'>
+            <div className='cloudimage01'></div>
+            <div className='cloudimage02'></div>
+          </div>
+        </div>
+
+        {/* fog */}
+        <div className='fogwrapper hide' id='fog'>
+          <div id='foglayer_01' className='fog'>
             <div className='image01'></div>
-            {/* <div className='image02'></div> */}
+            <div className='image02'></div>
           </div>
           <div id='foglayer_02' className='fog'>
             <div className='image01'></div>
-            {/* <div className='image02'></div> */}
+            <div className='image02'></div>
           </div>
-          <div id='foglayer_03' className='fog'>
+          <div id='foglayer_03' className='fog hide'>
             <div className='image01'></div>
-            {/* <div className='image02'></div> */}
+            <div className='image02'></div>
           </div>
         </div>
 
         {/* video */}
-        {/* <video
+        <video
           id='backVideo'
           loop={true}
           autoPlay={true}
           src='/videos/cloudsea.mp4'
-        /> */}
+          style={{ display: "none" }}
+        />
 
         {/* page indicator */}
         <div className='containerI hide' id='indicatorContainer'>
@@ -282,22 +325,21 @@ class App extends React.Component {
           </div>
         </div>
 
-        <div id='snow' className='snowContainer'></div>
-        {/* <HomePage></HomePage>
-        <Page1 handleInput={this.handleInput} />
+        {/* <HomePage></HomePage> */}
+        {/* <Page1 handleInput={this.handleInput} /> */}
         <Page2
           singleOptClick={this.handleSingleOptClick}
           optClick={this.handleBoolOptClick2}
-        /> */}
+        />
         <Page3
           handleInput={this.handleInput}
           multiOptClick3_4={this.handleMultiOptClick3_4}
           multiOptClick3_5={this.handleMultiOptClick3_5}
           forgetClick={this.handleForgetClick}
           optClick={this.handleBoolOptClick3}
-          handleForget={this.handleForget}
           test={this.test}
           sendData={this.sendData}
+          handleWeather={this.handleWeatherSlider}
         />
         <Page4
           chooseEmo={this.handleMultiTagClick}

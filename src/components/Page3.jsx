@@ -12,15 +12,15 @@ class Page3 extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <Q3_1 handleInput={this.props.handleInput} />
+        <Q3_1 handleInput={this.props.handleInput} />
         <Q3_2 handleInput={this.props.handleInput} />
         <Q3_3 handleInput={this.props.handleInput} />
-        <Q3_4
-          optClick={this.props.multiOptClick3_4}
+        <Q3_4_v2
+          test={this.props.test}
           forgetClick={this.props.forgetClick}
-          handleForget={this.props.handleForget}
-        /> */}
-        <Q3_4_v2 />
+          handleWeather={this.props.handleWeather}
+          handleSunny={this.props.handleSunny}
+        />
         <Q3_5
           optClick={this.props.multiOptClick3_5}
           forgetClick={this.props.forgetClick}

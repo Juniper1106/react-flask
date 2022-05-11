@@ -29,6 +29,7 @@ class ResultPage extends Component {
               className='genImg'
               id='genImg'
               src={this.state.resultPic}
+              // src={"../images/180.png"}
               alt='This is an image generated from your dream contents'
             />
           </div>

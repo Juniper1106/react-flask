@@ -1,10 +1,51 @@
+// let base_css = ``; // Put your custom base css here
+
 $(document).ready(function () {
   let snowflakes_count = 0;
+  let snow = document.getElementById("3-4-5");
 
-  $("#3-4-4").bind("input propertychange", function () {
-    let snow = document.getElementById("3-4-4");
+  $("#3-4-5").bind("input propertychange", function () {
+    changeSnowState();
+  });
+
+  $("#next3-4, #prev3-4, #3-4").click(function () {
+    stopSnow();
+  });
+
+  $("#prev3-5").click(function () {
+    startSnow();
+  });
+
+  $("#next3-3").click(function () {
+    function txtCount(txt) {
+      let val = txt.value;
+      var len = val.length;
+      return len;
+    }
+
+    if (txtCount(document.getElementById("scene")) > 0 && snow.value > 0) {
+      startSnow();
+    }
+  });
+
+  document.getElementById("3-4-6").addEventListener("change", function () {
+    changeSnowState();
+  });
+
+  if (typeof total !== "undefined") {
+    snowflakes_count = total;
+  }
+
+  function stopSnow() {
+    document.getElementById("snow").style.display = "none";
+  }
+
+  function startSnow() {
+    document.getElementById("snow").style.display = "contents";
+  }
+
+  function changeSnowState() {
     snowflakes_count = snow.value * 5;
-    // console.log(snowflakes_count);
 
     // remove previous snowflakes
     let snowflakes = document.querySelectorAll(".snowflake");
@@ -15,41 +56,13 @@ $(document).ready(function () {
     }
 
     if (snowflakes_count > 0) {
-      document.getElementById("snow").style.display = "block";
+      document.getElementById("snow").style.display = "contents";
       spawnSnowCSS(snowflakes_count);
       spawn_snow(snowflakes_count);
     } else {
       document.getElementById("snow").style.display = "none";
     }
-  });
-
-  // let base_css = ``; // Put your custom base css here
-
-  if (typeof total !== "undefined") {
-    snowflakes_count = total;
   }
-
-  // This function allows you to turn on and off the snow
-  //   function toggle_snow() {
-  //     let check_box = document.getElementById("toggle_snow");
-  //     if (check_box.checked == true) {
-  //       document.getElementById("snow").style.display = "block";
-  //     } else {
-  //       document.getElementById("snow").style.display = "none";
-  //     }
-  //   }
-
-  function stopSnow() {
-    document.getElementById("snow").style.display = "none";
-  }
-
-  function startSnow() {
-    document.getElementById("snow").style.display = "block";
-  }
-
-  $("#next3-4, #prev3-4").click(function () {
-    stopSnow();
-  });
 
   // Creating snowflakes
   function spawn_snow(snow_density = 200) {
