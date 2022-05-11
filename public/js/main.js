@@ -23,19 +23,20 @@ $(document).ready(function () {
   }
 
   // ···············detect input················
-  $("#character, #relation, #action, #scene").bind(
-    "input propertychange",
-    function () {
-      $("#prompt3-1, #prompt3-2, #prompt3-3").attr("class", "promptTag hide");
-    }
-  );
+  $(
+    "#character, #relation, #action, #scene, #realityRelation, #similarDream"
+  ).bind("input propertychange", function () {
+    $("#prompt2-3, #prompt3-1, #prompt3-2, #prompt3-3").attr(
+      "class",
+      "promptTag hide"
+    );
+  });
 
   // ···············radio button···············
   $(":radio").click(function () {
     var r = $(this).attr("name");
     var id = $(this).attr("id");
 
-    console.log(id);
     if (
       id != "2-3-1-1" &&
       id != "2-3-1-2" &&
@@ -302,7 +303,7 @@ $(document).ready(function () {
     $("#page2-3").removeClass("hide");
     $("#question2-3").attr(
       "class",
-      "optQuestion grid-2x5 animate__animated animate__slideInRight"
+      "optQuestion grid-2x3 animate__animated animate__slideInRight"
     );
     $("#question2-3").animate({ opacity: "1" }, "500ms");
 
@@ -317,6 +318,7 @@ $(document).ready(function () {
       "optQuestion grid-2x5 animate__animated animate__slideOutLeft"
     );
     $("#question2-2").animate({ opacity: "0" }, "500ms");
+    $("#bottomBtn2-2").fadeOut(500);
 
     $("#page2-3").removeClass("hide");
     $("#question2-3").attr(
@@ -324,9 +326,7 @@ $(document).ready(function () {
       "optQuestion grid-2x3 animate__animated animate__slideInRight"
     );
     $("#question2-3").animate({ opacity: "1" }, "500ms");
-
-    $("#bottomBtn2-2").css("display", "none");
-    $("#bottomBtn2-3").css("display", "block");
+    $("#bottomBtn2-3").fadeIn(500);
   });
 
   // ·············Q2-3·················
@@ -337,102 +337,67 @@ $(document).ready(function () {
       "optQuestion grid-2x5 animate__animated animate__slideInLeft"
     );
     $("#question2-2").animate({ opacity: "1" }, "500ms");
+    $("#bottomBtn2-2").fadeIn(500);
 
     $("#question2-3").attr(
       "class",
-      "question animate__animated animate__slideOutRight"
-    );
-    $("#question2-3").animate({ opacity: "0" }, "500ms");
-
-    $("#bottomBtn2-3").css("display", "none");
-    $("#bottomBtn2-2").css("display", "block");
-  });
-  // skip button
-  $("#2-3").click(function () {
-    $("#question2-3").attr(
-      "class",
-      "question animate__animated animate__slideOutLeft"
+      "optQuestion grid-2x3 animate__animated animate__slideOutRight"
     );
     $("#question2-3").animate({ opacity: "0" }, "500ms");
     $("#bottomBtn2-3").fadeOut(500);
-
-    $("#page2-4").removeClass("hide");
-    $("#question2-4").attr(
-      "class",
-      "optQuestion grid-2x2 animate__animated animate__slideInRight"
-    );
-    $("#question2-4").animate({ opacity: "1" }, "500ms");
-    $("#bottomBtn2-4").fadeIn(500);
   });
-  // to page2-4
-  $("#next2-3").click(function () {
-    $("#question2-3").attr(
-      "class",
-      "question animate__animated animate__slideOutLeft"
-    );
-    $("#question2-3").animate({ opacity: "0" }, "500ms");
-    $("#bottomBtn2-3").fadeOut(500);
-
-    $("#page2-4").removeClass("hide");
-    $("#question2-4").attr(
-      "class",
-      "optQuestion grid-2x2 animate__animated animate__slideInRight"
-    );
-    $("#question2-4").animate({ opacity: "1" }, "500ms");
-    $("#bottomBtn2-4").fadeIn(500);
+  // to page3-1
+  $("#continueBtnInPage2").click(function () {
+    if ($("#2-3-1-2").prop("checked") && $("#2-3-2-2").prop("checked")) {
+      Q2_3toQ3_1();
+    } else if (
+      $("#2-3-1-1").prop("checked") &&
+      $("#2-3-2-2").prop("checked") &&
+      txtCount(document.getElementById("realityRelation")) > 0
+    ) {
+      Q2_3toQ3_1();
+    } else if (
+      $("#2-3-1-2").prop("checked") &&
+      $("#2-3-2-1").prop("checked") &&
+      txtCount(document.getElementById("similarDream")) > 0
+    ) {
+      Q2_3toQ3_1();
+    } else if (
+      $("#2-3-1-1").prop("checked") &&
+      $("#2-3-2-1").prop("checked") &&
+      txtCount(document.getElementById("realityRelation")) > 0 &&
+      txtCount(document.getElementById("similarDream")) > 0
+    ) {
+      Q2_3toQ3_1();
+    } else {
+      $("#prompt2-3").removeClass("hide");
+    }
   });
 
-  // ·············Q2-4·················
-  // back to page2-3
-  // $("#prev2-4").click(function () {
-  //   $("#question2-3").attr(
-  //     "class",
-  //     "question animate__animated animate__slideInLeft"
-  //   );
-  //   $("#question2-3").animate({ opacity: "1" }, "500ms");
-  //   $("#bottomBtn2-3").fadeIn(500);
+  function Q2_3toQ3_1() {
+    $("#extra-background").attr("class", "extra-background page3");
+    $("#page3-1").fadeIn(500);
+    $("#page2-3").fadeOut(500);
+    $("#page3-1").removeClass("hide");
+    $("#question2-3").attr("class", "optQuestion grid-2x3");
+    $("#question3-1").attr("class", "question");
 
-  //   $("#question2-4").attr(
-  //     "class",
-  //     "optQuestion grid-2x2 animate__animated animate__slideOutRight"
-  //   );
-  //   $("#question2-4").animate({ opacity: "0" }, "500ms");
-  //   $("#bottomBtn2-4").fadeOut(500);
-  // });
-  // // to page 3-1
-  // $("#continueBtnInPage2").click(function () {
-  //   var flag = 0;
-  //   for (let index = 1; index <= 2; index++) {
-  //     var state = $("#2-4-" + index).prop("checked");
-  //     if (state == true) {
-  //       flag = 1;
-  //     }
-  //   }
-  //   if (flag == 0) {
-  //     $("#prompt2-4").removeClass("hide");
-  //   } else {
-  //     $("#extra-background").attr("class", "extra-background page3");
-  //     $("#page3-1").fadeIn(500);
-  //     $("#page2-4").fadeOut(500);
-  //     $("#page3-1").removeClass("hide");
-  //     $("#question2-4").attr("class", "optQuestion grid-2x2");
-  //     $("#question3-1").attr("class", "question");
-  //     pageFlag = 3;
-  //     $("#1").animate({ left: "0px" });
-  //     $("#2").animate({ left: "34px" });
-  //     $("#indicator").animate({ left: "68px" });
-  //     $("#3").animate({ left: "102px" });
-  //     $("#4").animate({ left: "136px" });
-  //   }
-  // });
+    pageFlag = 3;
+
+    $("#1").animate({ left: "0px" });
+    $("#2").animate({ left: "34px" });
+    $("#indicator").animate({ left: "68px" });
+    $("#3").animate({ left: "102px" });
+    $("#4").animate({ left: "136px" });
+  }
 
   // -------------page3----------------
   // ·············Q3-1·················
-  // back to page2-4
+  // back to page2-3
   $("#backBtnInPage3").click(function () {
     $("#extra-background").attr("class", "extra-background page2");
-    $("#question2-4").attr("class", "optQuestion grid-2x2");
-    $("#page2-4").fadeIn(500);
+    $("#question2-3").attr("class", "optQuestion grid-2x3");
+    $("#page2-3").fadeIn(500);
     $("#page3-1").fadeOut(500);
     $("#question3-1").attr("class", "question");
     pageFlag = 2;

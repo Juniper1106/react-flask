@@ -79,12 +79,13 @@ class App extends React.Component {
     this.setState({ dream });
   };
 
-  handleBoolOptClick2 = (e) => {
-    const id = e.target.id;
+  handleLoop = (e) => {
     let dream = { ...this.state.dream };
-    if (id === "2-4-1" && e.target.checked === true) {
+    let id = e.target.id;
+    console.log(id);
+    if (id == "2-3-2-1") {
       dream.loop = true;
-    } else if (id === "2-4-2" && e.target.checked === true) {
+    } else if (id == "2-3-2-2") {
       dream.loop = false;
     }
     this.setState({ dream });
@@ -329,7 +330,7 @@ class App extends React.Component {
         {/* <Page1 handleInput={this.handleInput} /> */}
         <Page2
           singleOptClick={this.handleSingleOptClick}
-          optClick={this.handleBoolOptClick2}
+          handleLoop={this.handleLoop}
         />
         <Page3
           handleInput={this.handleInput}

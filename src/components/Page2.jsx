@@ -11,10 +11,8 @@ class Page2 extends Component {
     return (
       <React.Fragment>
         {/* <Q2_1 optClick={this.props.singleOptClick} /> */}
-        {/* <Q2_2 /> */}
-        <Q2_3_v2 />
-        {/* <Q2_3 /> */}
-        {/* <Q2_4 optClick={this.props.optClick} /> */}
+        <Q2_2 />
+        <Q2_3_v2 handleLoop={this.props.handleLoop} />
       </React.Fragment>
     );
   }

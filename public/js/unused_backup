@@ -1,0 +1,106 @@
+// ·············Q2-3·················
+// back to page2-2
+$("#prev2-3").click(function () {
+  $("#question2-2").attr(
+    "class",
+    "optQuestion grid-2x5 animate__animated animate__slideInLeft"
+  );
+  $("#question2-2").animate({ opacity: "1" }, "500ms");
+  $("#bottomBtn2-2").fadeIn(500);
+
+  $("#question2-3").attr(
+    "class",
+    "optQuestion grid-2x3 animate__animated animate__slideOutRight"
+  );
+  $("#question2-3").animate({ opacity: "0" }, "500ms");
+  $("#bottomBtn2-3").fadeOut(500);
+});
+// skip button
+$("#2-3").click(function () {
+  $("#question2-3").attr(
+    "class",
+    "question animate__animated animate__slideOutLeft"
+  );
+  $("#question2-3").animate({ opacity: "0" }, "500ms");
+  $("#bottomBtn2-3").fadeOut(500);
+
+  $("#page2-4").removeClass("hide");
+  $("#question2-4").attr(
+    "class",
+    "optQuestion grid-2x2 animate__animated animate__slideInRight"
+  );
+  $("#question2-4").animate({ opacity: "1" }, "500ms");
+  $("#bottomBtn2-4").fadeIn(500);
+});
+// to page2-4
+$("#next2-3").click(function () {
+  $("#question2-3").attr(
+    "class",
+    "question animate__animated animate__slideOutLeft"
+  );
+  $("#question2-3").animate({ opacity: "0" }, "500ms");
+  $("#bottomBtn2-3").fadeOut(500);
+
+  $("#page2-4").removeClass("hide");
+  $("#question2-4").attr(
+    "class",
+    "optQuestion grid-2x2 animate__animated animate__slideInRight"
+  );
+  $("#question2-4").animate({ opacity: "1" }, "500ms");
+  $("#bottomBtn2-4").fadeIn(500);
+});
+
+// ·············Q2-4·················
+// back to page2-3
+$("#prev2-4").click(function () {
+  $("#question2-3").attr(
+    "class",
+    "question animate__animated animate__slideInLeft"
+  );
+  $("#question2-3").animate({ opacity: "1" }, "500ms");
+  $("#bottomBtn2-3").fadeIn(500);
+
+  $("#question2-4").attr(
+    "class",
+    "optQuestion grid-2x2 animate__animated animate__slideOutRight"
+  );
+  $("#question2-4").animate({ opacity: "0" }, "500ms");
+  $("#bottomBtn2-4").fadeOut(500);
+});
+// to page 3-1
+$("#continueBtnInPage2").click(function () {
+  var flag = 0;
+  for (let index = 1; index <= 2; index++) {
+    var state = $("#2-4-" + index).prop("checked");
+    if (state == true) {
+      flag = 1;
+    }
+  }
+  if (flag == 0) {
+    $("#prompt2-4").removeClass("hide");
+  } else {
+    $("#extra-background").attr("class", "extra-background page3");
+    $("#page3-1").fadeIn(500);
+    $("#page2-4").fadeOut(500);
+    $("#page3-1").removeClass("hide");
+    $("#question2-4").attr("class", "optQuestion grid-2x2");
+    $("#question3-1").attr("class", "question");
+    pageFlag = 3;
+    $("#1").animate({ left: "0px" });
+    $("#2").animate({ left: "34px" });
+    $("#indicator").animate({ left: "68px" });
+    $("#3").animate({ left: "102px" });
+    $("#4").animate({ left: "136px" });
+  }
+});
+
+handleBoolOptClick2 = (e) => {
+  const id = e.target.id;
+  let dream = { ...this.state.dream };
+  if (id === "2-4-1" && e.target.checked === true) {
+    dream.loop = true;
+  } else if (id === "2-4-2" && e.target.checked === true) {
+    dream.loop = false;
+  }
+  this.setState({ dream });
+};

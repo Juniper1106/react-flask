@@ -33,12 +33,11 @@ class Q2_3_v2 extends Component {
               <input type='radio' name='group2-3-1' id='2-3-1-2' />
             </div>
             <textarea
-              id='relation'
+              id='realityRelation'
               className='description'
               cols={29}
               rows={4}
               placeholder='最近在现实生活中...'
-              onChange={this.props.handleInput}
             />
           </div>
           <div />
@@ -56,6 +55,7 @@ class Q2_3_v2 extends Component {
                 name='group2-3-2'
                 id='2-3-2-1'
                 defaultChecked
+                onClick={this.props.handleLoop}
               />
               <label
                 id='label2-3-2-2'
@@ -63,15 +63,19 @@ class Q2_3_v2 extends Component {
                 style={{ opacity: 0.3 }}>
                 否
               </label>
-              <input type='radio' name='group2-3-2' id='2-3-2-2' />
+              <input
+                type='radio'
+                name='group2-3-2'
+                id='2-3-2-2'
+                onClick={this.props.handleLoop}
+              />
             </div>
             <textarea
-              id='action'
+              id='similarDream'
               className='description'
               cols={29}
               rows={4}
               placeholder='之前还梦见...'
-              onChange={this.props.handleInput}
             />
           </div>
           <p className='promptTag hide' id='prompt2-3'>
